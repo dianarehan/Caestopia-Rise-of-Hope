@@ -1,7 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 public static class DialogueManager
@@ -37,6 +34,7 @@ public static class DialogueManager
                 BindDialogue();
             }
         });
+        root.style.display = DisplayStyle.None;
     }
 
     private static void BindDialogue()
