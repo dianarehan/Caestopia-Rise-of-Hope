@@ -17,6 +17,8 @@ public static class ChoicesManager
         choiceCard = _choiceCard;
         choicesList = root.Q<VisualElement>("ChoicesList");
         questionLable = root.Q<Label>("Question");
+
+        root.style.display = DisplayStyle.None;
     }
 
     public static void ShowChoices(string question, List<Choice> choices)

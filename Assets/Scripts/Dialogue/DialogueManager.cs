@@ -41,7 +41,6 @@ public static class DialogueManager
     {
         Dialogue dialogue = dialogueList[dialogueIndex];
 
-        root.style.display= DisplayStyle.Flex;
         charName.text = dialogue.CharName;
         message.text = dialogue.Message;
         charAvatar.style.backgroundImage = new StyleBackground(dialogue.CharAvatar);
@@ -51,6 +50,7 @@ public static class DialogueManager
     {
         dialogueList = _dialogueList;
         dialogueIndex = 0;
+        root.style.display = DisplayStyle.Flex;
         BindDialogue();
     }
 }
