@@ -228,7 +228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e93c802dcebb4d9fdde80137b7090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueUI: {fileID: 1621503569}
+  dialogueUI: {fileID: 1621503569}
+  choicesUI: {fileID: 2050884817}
+  ChoiceCard: {fileID: 9197481963319205126, guid: e1825e32ebebad64fbf3ea39f4d19196, type: 3}
 --- !u!1 &808024170
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &808024171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,6 +311,50 @@ Transform:
   - {fileID: 1621503568}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &884997614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 884997616}
+  - component: {fileID: 884997615}
+  m_Layer: 0
+  m_Name: ChoicesTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &884997615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884997614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c06e0d3a4f30c8744adcbb421b3b917f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &884997616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884997614}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1621503567
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,14 +413,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2050884815}
   - component: {fileID: 2050884817}
-  - component: {fileID: 2050884816}
   m_Layer: 0
   m_Name: Choices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2050884815
 Transform:
   m_ObjectHideFlags: 0
@@ -390,19 +435,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 844106396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2050884816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050884814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7af0154c16091684593f291e0cecfa90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choiceCard: {fileID: 9197481963319205126, guid: e1825e32ebebad64fbf3ea39f4d19196, type: 3}
 --- !u!114 &2050884817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,3 +458,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 844106396}
   - {fileID: 808024172}
+  - {fileID: 884997616}

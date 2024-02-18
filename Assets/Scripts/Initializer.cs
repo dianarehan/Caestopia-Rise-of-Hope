@@ -5,10 +5,13 @@ using UnityEngine.UIElements;
 
 public class Initializer : MonoBehaviour
 {
-    [SerializeField] private UIDocument DialogueUI;
+    [SerializeField] private UIDocument dialogueUI;
+    [SerializeField] private UIDocument choicesUI;
+    [SerializeField] private VisualTreeAsset ChoiceCard;
 
     void Awake()
     {
-        DialogueManager.Initialize(DialogueUI);
+        DialogueManager.Initialize(dialogueUI);
+        ChoicesManager.Initialize(choicesUI, ChoiceCard);
     }
 }
