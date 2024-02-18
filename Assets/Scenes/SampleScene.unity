@@ -242,12 +242,12 @@ GameObject:
   - component: {fileID: 808024172}
   - component: {fileID: 808024171}
   m_Layer: 0
-  m_Name: Test
+  m_Name: DialogueTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &808024171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &884997615
 MonoBehaviour:
   m_ObjectHideFlags: 0
