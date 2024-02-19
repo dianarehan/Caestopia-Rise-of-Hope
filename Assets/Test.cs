@@ -29,9 +29,11 @@ public class Test : MonoBehaviour
            new Dialogue("Royal counsler", "my lord, I’ll Help you rule the City" +
             " but you have to make some tough choices, do you understand?", rick),
         };
-        List<Choice> choices = new List<Choice>();
-        choices.Add(new Choice("YES", Yes1));
-        choices.Add(new Choice("NO", No1));
+        List<Choice> choices = new List<Choice>
+        {
+            new Choice("YES", Yes1),
+            new Choice("NO", No1)
+        };
         DialogueManager.Instance.ShowDialogue(list,"YES Or NO ?", choices);
     }
 
@@ -41,12 +43,6 @@ public class Test : MonoBehaviour
         
     }
 
-    IEnumerator StartDialogue(UnityAction actione)
-    {
-        yield return new WaitForSeconds(5);
-        actione.Invoke();
-
-    }
     void Yes1()
     {
         List<Dialogue> list = new List<Dialogue>()
@@ -55,9 +51,7 @@ public class Test : MonoBehaviour
            new Dialogue("King", "for now you have to keep the citizens happy and grow our city .", rick),
            new Dialogue("King", "-good luck sir!! .", rick)
         };
-        DialogueManager.Instance.ShowDialogue(list);
-        //StartCoroutine(StartDialogue(ShowAfter1));
-        ShowAfter1();
+        DialogueManager.Instance.ShowDialogue(list, ShowAfter1);
     }
     void No1()
     {
@@ -65,8 +59,7 @@ public class Test : MonoBehaviour
         {
            new Dialogue("King", "haha funny just give the people some answers.", rick),
         };
-        DialogueManager.Instance.ShowDialogue(list);
-        StartCoroutine(StartDialogue(ShowAfter1));
+        DialogueManager.Instance.ShowDialogue(list, ShowAfter1);
 
     }
 
@@ -89,8 +82,7 @@ public class Test : MonoBehaviour
         {
            new Dialogue("King", " I am continually humbled by your kindness and generosity. -10 gold +9 happiness", rick),
         };
-        DialogueManager.Instance.ShowDialogue(list);
-        StartCoroutine(StartDialogue(ShowAfter2));
+        DialogueManager.Instance.ShowDialogue(list, ShowAfter2);
     }
     void No2 ()
     {
@@ -98,8 +90,7 @@ public class Test : MonoBehaviour
         {
            new Dialogue("King", "  oh man!!! -2 happiness", rick),
         };
-        DialogueManager.Instance.ShowDialogue(list);
-        StartCoroutine(StartDialogue(ShowAfter2));
+        DialogueManager.Instance.ShowDialogue(list, ShowAfter2);
     }
     void ShowAfter2()
     {

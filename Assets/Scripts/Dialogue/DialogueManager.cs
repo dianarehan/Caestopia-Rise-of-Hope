@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 public class DialogueManager : MonoBehaviour
 {
     private static DialogueManager instance;
+
+    private Coroutine curCoroutine;
 
     private UIDocument dialogueTemplate;
     private Label charName;
@@ -19,6 +22,8 @@ public class DialogueManager : MonoBehaviour
     private string questionAfter;
     private List<Choice> choicesAfter;
 
+    private UnityAction actionAfter;
+
     public static DialogueManager Instance
     {
         get
@@ -27,6 +32,17 @@ public class DialogueManager : MonoBehaviour
             if (instance != null) return instance;
             else return instance = FindObjectOfType<DialogueManager>();
         } 
+    }
+
+    private Coroutine StopAndStartCoroutine(IEnumerator newCoroutine)
+    {
+        if (curCoroutine != null)
+        {
+            StopCoroutine(curCoroutine);
+        }
+
+        curCoroutine = StartCoroutine(newCoroutine);
+        return curCoroutine;
     }
 
     public void Initialize(UIDocument _dialogueTemplate)
@@ -40,7 +56,6 @@ public class DialogueManager : MonoBehaviour
 
         root.RegisterCallback((ClickEvent evt) => 
         {
-            message.text = "";
             dialogueIndex++;
             if (dialogueIndex >= dialogueList.Count)
             {
@@ -49,12 +64,17 @@ public class DialogueManager : MonoBehaviour
                 {
                     ChoicesManager.ShowChoices(questionAfter, choicesAfter);
                 }
+                else if (actionAfter != null)
+                {
+                    actionAfter.Invoke();
+                }
             }
             else
             {
-                StartCoroutine(BindDialogue());
+                StopAndStartCoroutine(BindDialogue());
             }
         });
+
         root.style.display = DisplayStyle.None;
     }
 
@@ -71,20 +91,23 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator BindDialogue()
     {
         Dialogue dialogue = dialogueList[dialogueIndex];
+        message.text = "";
 
         charAvatar.style.backgroundImage = new StyleBackground(dialogue.CharAvatar);
-        yield return StartCoroutine(AssignLabelText(charName, dialogue.CharName));
-        yield return StartCoroutine(AssignLabelText(message, dialogue.Message));
+        yield return StopAndStartCoroutine(AssignLabelText(charName, dialogue.CharName));
+        yield return StopAndStartCoroutine(AssignLabelText(message, dialogue.Message));
     }
 
     public void ShowDialogue(List<Dialogue> _dialogueList) 
     {
         choicesAfter = null;
         questionAfter = null;
+        actionAfter = null;
+
         dialogueList = _dialogueList;
         dialogueIndex = 0;
         root.style.display = DisplayStyle.Flex;
-        StartCoroutine(BindDialogue());
+        StopAndStartCoroutine(BindDialogue());
     }
 
     public void ShowDialogue(List<Dialogue> _dialogueList, string _question,List<Choice> _choicesAfter)
@@ -92,6 +115,12 @@ public class DialogueManager : MonoBehaviour
         ShowDialogue(_dialogueList);
         choicesAfter = _choicesAfter;
         questionAfter = _question;
+    }
+
+    public void ShowDialogue(List<Dialogue> _dialogueList, UnityAction _actionAfter)
+    {
+        ShowDialogue(_dialogueList);
+        actionAfter = _actionAfter;
     }
 
 }
