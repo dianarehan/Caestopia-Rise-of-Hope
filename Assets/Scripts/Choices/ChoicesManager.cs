@@ -21,19 +21,32 @@ public static class ChoicesManager
         root.style.display = DisplayStyle.None;
     }
 
-    public static void ShowChoices(string question, List<Choice> choices)
+    public static void ShowChoices(Question question)
     {
         root.style.display = DisplayStyle.Flex;
         choicesList.Clear();
-        questionLable.text = question;
+        questionLable.text = question.Name;
 
-        foreach (Choice choice in choices)
+        foreach (Choice choice in question.Choices)
         {
             VisualElement _choice = choiceCard.Instantiate();
             Button choiceBut = _choice.Q<Button>("Choice");
             choiceBut.text = choice.Name;
             choiceBut.clicked += () => {
                 choice.Action.Invoke();
+                if (choice.NxtItem != null ) 
+                {
+                    if (choice.NxtItem is Question)
+                    {
+                        // AW3AAAAA EL RECURSION
+                        ShowChoices((Question)choice.NxtItem);
+                    }
+                    else if (choice.NxtItem is Dialogue)
+                    {
+                        root.style.display = DisplayStyle.None;
+                         DialogueManager.Instance.ShowDialogue((Dialogue)choice.NxtItem);
+                    }
+                }
                 root.style.display = DisplayStyle.None;
             };
             choicesList.Add(_choice);

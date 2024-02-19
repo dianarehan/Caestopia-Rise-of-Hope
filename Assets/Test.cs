@@ -12,9 +12,37 @@ public class Test : MonoBehaviour
     [SerializeField] private Sprite batman;
 
 
+    private void KillBOB()
+    {
+        Scenario scenario = new Scenario();
+
+        scenario.Push(new Dialogue("BOB", "AAAAAHHHH NOO", rick));
+        scenario.Push(new Dialogue("BOB", "7raaaam", rick));
+        scenario.Push(new Question("Are you sure", new List<Choice>() {
+            new Choice("Yes", () => { Debug.Log("Yes");}),
+            new Choice("No", () => { Debug.Log("No");})
+            }));
+        scenario.StartScenario();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        Scenario scenario1 = new Scenario();
+        scenario1.Push(new Dialogue("BOB", "IAAMMM FOCKIN BOB", rick));
+        scenario1.Push(new Dialogue("LOL", "IAAMMM FOCKIN LOL", morty));
+        scenario1.Push(new Dialogue("SOS", "IAAMMM FOCKIN SOS", batman));
+        scenario1.Push(new Question("Kill someone", 
+        new List<Choice>() 
+        {
+            new Choice("KILL BOB", () => { KillBOB(); }),
+            new Choice("KILL LOL", () => {  }),
+            new Choice("KILL SOS", () => {  }),
+        }
+            ));
+        scenario1.StartScenario();
+
+
         /* List<Dialogue> list = new List<Dialogue>()
          {
              new Dialogue("Rick", "What the Hell is this !!!", rick),
@@ -22,7 +50,7 @@ public class Test : MonoBehaviour
              new Dialogue("Batman", "What is this mess", batman)
          };
 
-         DialogueManager.ShowDialogue(list);*/
+         DialogueManager.ShowDialogue(list);
 
         List<Dialogue> list = new List<Dialogue>()
         {
@@ -35,8 +63,10 @@ public class Test : MonoBehaviour
             new Choice("NO", No1)
         };
         DialogueManager.Instance.ShowDialogue(list,"YES Or NO ?", choices);
+        */
     }
 
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -121,4 +151,5 @@ public class Test : MonoBehaviour
         };
         DialogueManager.Instance.ShowDialogue(list);
     }
+    */
 }
