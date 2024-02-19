@@ -16,13 +16,7 @@ public class DialogueManager : MonoBehaviour
     private VisualElement charAvatar;
     private VisualElement root;
 
-    private List<Dialogue> dialogueList;
-    private int dialogueIndex;
-
-    private string questionAfter;
-    private List<Choice> choicesAfter;
-
-    private UnityAction actionAfter;
+    private Dialogue headDialogue;
 
     public static DialogueManager Instance
     {
@@ -47,7 +41,6 @@ public class DialogueManager : MonoBehaviour
 
     public void Initialize(UIDocument _dialogueTemplate)
     {
-        dialogueIndex = 0;
         dialogueTemplate = _dialogueTemplate;
         root = dialogueTemplate.rootVisualElement;
         charName = root.Q<Label>("CharName");
@@ -56,22 +49,23 @@ public class DialogueManager : MonoBehaviour
 
         root.RegisterCallback((ClickEvent evt) => 
         {
-            dialogueIndex++;
-            if (dialogueIndex >= dialogueList.Count)
+            if (headDialogue.NxtItem != null)
             {
-                root.style.display = DisplayStyle.None;
-                if (questionAfter != null) 
+                if (headDialogue.NxtItem is Dialogue) 
                 {
-                    ChoicesManager.ShowChoices(questionAfter, choicesAfter);
+                    headDialogue = headDialogue.NxtItem as Dialogue;  
+                    StopAndStartCoroutine(BindDialogue());
                 }
-                else if (actionAfter != null)
+                else if (headDialogue.NxtItem is Question)
                 {
-                    actionAfter.Invoke();
+                    root.style.display = DisplayStyle.None;
+                    ChoicesManager.ShowChoices((Question)headDialogue.NxtItem);
+                    headDialogue = null;
                 }
             }
             else
             {
-                StopAndStartCoroutine(BindDialogue());
+                root.style.display = DisplayStyle.None;
             }
         });
 
@@ -90,7 +84,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator BindDialogue()
     {
-        Dialogue dialogue = dialogueList[dialogueIndex];
+        Dialogue dialogue = headDialogue;
         message.text = "";
 
         charAvatar.style.backgroundImage = new StyleBackground(dialogue.CharAvatar);
@@ -98,29 +92,11 @@ public class DialogueManager : MonoBehaviour
         yield return StopAndStartCoroutine(AssignLabelText(message, dialogue.Message));
     }
 
-    public void ShowDialogue(List<Dialogue> _dialogueList) 
+    public void ShowDialogue(Dialogue _headDialogue) 
     {
-        choicesAfter = null;
-        questionAfter = null;
-        actionAfter = null;
+        this.headDialogue = _headDialogue;
 
-        dialogueList = _dialogueList;
-        dialogueIndex = 0;
         root.style.display = DisplayStyle.Flex;
         StopAndStartCoroutine(BindDialogue());
     }
-
-    public void ShowDialogue(List<Dialogue> _dialogueList, string _question,List<Choice> _choicesAfter)
-    {
-        ShowDialogue(_dialogueList);
-        choicesAfter = _choicesAfter;
-        questionAfter = _question;
-    }
-
-    public void ShowDialogue(List<Dialogue> _dialogueList, UnityAction _actionAfter)
-    {
-        ShowDialogue(_dialogueList);
-        actionAfter = _actionAfter;
-    }
-
 }
