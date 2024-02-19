@@ -11,7 +11,7 @@ public class Initializer : MonoBehaviour
 
     void Awake()
     {
-        DialogueManager.Initialize(dialogueUI);
+        DialogueManager.Instance.Initialize(dialogueUI);
         ChoicesManager.Initialize(choicesUI, ChoiceCard);
     }
 }

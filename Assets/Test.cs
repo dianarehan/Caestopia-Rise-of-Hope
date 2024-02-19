@@ -19,7 +19,7 @@ public class Test : MonoBehaviour
             new Dialogue("Batman", "What is this mess", batman)
         };
 
-        DialogueManager.ShowDialogue(list);
+        DialogueManager.Instance.ShowDialogue(list);
     }
 
     // Update is called once per frame

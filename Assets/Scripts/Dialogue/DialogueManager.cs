@@ -1,22 +1,35 @@
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UIElements;
 
-public static class DialogueManager
+public class DialogueManager : MonoBehaviour
 {
-    private static UIDocument dialogueTemplate;
+    private static DialogueManager instance;
 
-    private static VisualElement root;
-    private static Label charName;
-    private static Label message;
-    private static VisualElement charAvatar;
+    private UIDocument dialogueTemplate;
+    private Label charName;
+    private Label message;
+    private VisualElement charAvatar;
+    private VisualElement root;
 
-    private static List<Dialogue> dialogueList;
-    private static int dialogueIndex;
+    private List<Dialogue> dialogueList;
+    private int dialogueIndex;
 
-    private static string questionAfter;
-    private static List<Choice> choicesAfter;
+    private string questionAfter;
+    private List<Choice> choicesAfter;
 
-    public static void Initialize(UIDocument _dialogueTemplate)
+    public static DialogueManager Instance
+    {
+        get
+        {
+            // More Optimized
+            if (instance != null) return instance;
+            else return instance = FindObjectOfType<DialogueManager>();
+        } 
+    }
+
+    public void Initialize(UIDocument _dialogueTemplate)
     {
         dialogueIndex = 0;
         dialogueTemplate = _dialogueTemplate;
@@ -27,6 +40,7 @@ public static class DialogueManager
 
         root.RegisterCallback((ClickEvent evt) => 
         {
+            message.text = "";
             dialogueIndex++;
             if (dialogueIndex >= dialogueList.Count)
             {
@@ -38,32 +52,42 @@ public static class DialogueManager
             }
             else
             {
-                BindDialogue();
+                StartCoroutine(BindDialogue());
             }
         });
         root.style.display = DisplayStyle.None;
     }
 
-    private static void BindDialogue()
+    private IEnumerator AssignLabelText(Label label, string newText)
+    {
+        label.text = "";
+        foreach (char c in newText)
+        {
+            label.text += c;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
+    private IEnumerator BindDialogue()
     {
         Dialogue dialogue = dialogueList[dialogueIndex];
 
-        charName.text = dialogue.CharName;
-        message.text = dialogue.Message;
         charAvatar.style.backgroundImage = new StyleBackground(dialogue.CharAvatar);
+        yield return StartCoroutine(AssignLabelText(charName, dialogue.CharName));
+        yield return StartCoroutine(AssignLabelText(message, dialogue.Message));
     }
 
-    public static void ShowDialogue(List<Dialogue> _dialogueList) 
+    public void ShowDialogue(List<Dialogue> _dialogueList) 
     {
         choicesAfter = null;
         questionAfter = null;
         dialogueList = _dialogueList;
         dialogueIndex = 0;
         root.style.display = DisplayStyle.Flex;
-        BindDialogue();
+        StartCoroutine(BindDialogue());
     }
 
-    public static void ShowDialogue(List<Dialogue> _dialogueList, string _question,List<Choice> _choicesAfter)
+    public void ShowDialogue(List<Dialogue> _dialogueList, string _question,List<Choice> _choicesAfter)
     {
         ShowDialogue(_dialogueList);
         choicesAfter = _choicesAfter;
