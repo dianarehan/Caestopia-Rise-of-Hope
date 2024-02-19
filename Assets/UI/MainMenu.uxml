@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UI/MainMenu.uss?fileID=7433441132597879392&amp;guid=7d3057c477038b34e9f16297ba044f2d&amp;type=3#MainMenu" />
+    <ui:VisualElement name="main-menu-screen" class="screen screen-background">
+        <ui:VisualElement name="menu-panel" class="menu-panel" style="flex-grow: 0; align-items: center; justify-content: center; width: 50%; height: 75%; align-self: flex-start; background-color: rgba(255, 255, 255, 0); color: rgb(255, 255, 255); -unity-text-outline-color: rgba(255, 255, 255, 0);">
+            <ui:VisualElement name="menu-buttons" class="menu-buttons" style="align-items: center; width: 100%;">
+                <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="start-button" class="Buttons menu-button" style="height: 50px; width: 200px; font-size: 40px;" />
+                <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="settings-button" class="Buttons menu-button" style="height: 50px; width: 200px; font-size: 40px;" />
+                <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="exit-button" class="Buttons menu-button" style="height: 50px; width: 200px; font-size: 40px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

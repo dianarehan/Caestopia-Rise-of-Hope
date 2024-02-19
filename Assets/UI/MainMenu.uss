@@ -1,0 +1,63 @@
+.Buttons {
+    -unity-font: url('project://database/Assets/Fonts/Pixel%20Font%20-%20Tripfive/Fonts/Tripfive.fontsettings?fileID=12800000&guid=29821db8324231f4481e730bf6288b9c&type=2#Tripfive');
+    -unity-font-definition: url('project://database/Assets/Fonts/ThaleahFat_TTF%20SDF.asset?fileID=11400000&guid=d1f31a470535c0f4eab6f017371f1aa2&type=2#ThaleahFat_TTF SDF');
+    height: 27px;
+    background-color: rgba(0, 0, 0, 0.07);
+    border-left-color: rgb(142, 142, 142);
+    border-right-color: rgb(142, 142, 142);
+    border-top-color: rgb(142, 142, 142);
+    border-bottom-color: rgb(142, 142, 142);
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 130px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+}
+
+.Buttons:active {
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    width: 130px;
+    height: 37px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.Buttons:hover {
+    background-color: rgba(0, 0, 0, 0.33);
+    width: 130px;
+    height: 37px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.screen {
+    flex-grow: 1;
+    align-items: center;
+    background-image: url('project://database/Assets/background_0.png?fileID=2800000&guid=5114a7963d03d5f48b405bdd4fcc9051&type=3#background_0');
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.screen-background {
+}
+
+.menu-buttons {
+    flex-grow: 0;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    min-width: 200px;
+}
