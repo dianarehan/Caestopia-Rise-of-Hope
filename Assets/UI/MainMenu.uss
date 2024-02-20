@@ -2,11 +2,11 @@
     -unity-font: url('project://database/Assets/Fonts/Pixel%20Font%20-%20Tripfive/Fonts/Tripfive.fontsettings?fileID=12800000&guid=29821db8324231f4481e730bf6288b9c&type=2#Tripfive');
     -unity-font-definition: url('project://database/Assets/Fonts/ThaleahFat_TTF%20SDF.asset?fileID=11400000&guid=d1f31a470535c0f4eab6f017371f1aa2&type=2#ThaleahFat_TTF SDF');
     height: 27px;
-    background-color: rgba(0, 0, 0, 0.07);
-    border-left-color: rgb(142, 142, 142);
-    border-right-color: rgb(142, 142, 142);
-    border-top-color: rgb(142, 142, 142);
-    border-bottom-color: rgb(142, 142, 142);
+    background-color: rgba(149, 103, 103, 0.07);
+    border-left-color: rgb(126, 111, 112);
+    border-right-color: rgb(126, 111, 112);
+    border-top-color: rgb(126, 111, 112);
+    border-bottom-color: rgb(126, 111, 112);
     border-top-width: 4px;
     border-right-width: 4px;
     border-bottom-width: 4px;
@@ -17,15 +17,18 @@
     border-bottom-left-radius: 8px;
     width: 130px;
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(174, 202, 204);
     -unity-text-align: middle-center;
+    -unity-font-style: normal;
+    -unity-text-outline-width: 1px;
+    -unity-text-outline-color: rgba(0, 0, 0, 0);
 }
 
 .Buttons:active {
-    border-left-color: rgb(255, 255, 255);
-    border-right-color: rgb(255, 255, 255);
-    border-top-color: rgb(255, 255, 255);
-    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: rgb(192, 121, 88);
+    border-right-color: rgb(192, 121, 88);
+    border-top-color: rgb(192, 121, 88);
+    border-bottom-color: rgb(192, 121, 88);
     width: 130px;
     height: 37px;
     margin-top: 0;
@@ -36,8 +39,9 @@
     color: rgb(255, 255, 255);
     transition-duration: 0.1s;
     transition-timing-function: ease-out-cubic;
-    background-color: rgb(119, 217, 115);
+    background-color: rgb(3, 24, 2);
     -unity-text-outline-color: rgba(190, 117, 117, 0.63);
+    -unity-background-image-tint-color: rgb(128, 11, 11);
 }
 
 .Buttons:hover {
