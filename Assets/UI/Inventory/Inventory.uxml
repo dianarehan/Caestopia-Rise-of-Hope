@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Inventory/inventory.uss?fileID=7433441132597879392&amp;guid=5b00e8b233696b145b0d91798b2aedf2&amp;type=3#inventory" />
+    <ui:VisualElement name="Exit" style="flex-grow: 1; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.47);" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 0; width: 75%; height: 75%; flex-shrink: 0; align-self: center; top: 12.5%; background-color: rgba(255, 254, 254, 0.93); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 17px; border-top-right-radius: 17px; border-bottom-right-radius: 17px; border-bottom-left-radius: 17px; border-left-color: rgba(0, 0, 0, 0.92); border-right-color: rgba(0, 0, 0, 0.92); border-top-color: rgba(0, 0, 0, 0.92); border-bottom-color: rgba(0, 0, 0, 0.92); position: absolute;">
+        <ui:Label tabindex="-1" text="Inventory " parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 21px; margin-right: 21px; margin-bottom: 21px; margin-left: 21px; -unity-text-align: middle-center; font-size: 25px; -unity-font-style: bold;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: flex-end;">
+            <ui:VisualElement style="flex-grow: 0; width: 5%; flex-shrink: 0; background-image: url(&apos;project://database/Assets/UI/Inventory/bulb.png?fileID=21300000&amp;guid=a874bde68d3520248b1cede91bb52c4c&amp;type=3#bulb&apos;);" />
+            <ui:Label tabindex="-1" text="Reorderable" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold;" />
+        </ui:VisualElement>
+        <ui:ListView focusable="true" reorder-mode="Animated" reorderable="true" name="InventoryList" style="width: 100%; height: 100%;" />
+    </ui:VisualElement>
+</ui:UXML>
