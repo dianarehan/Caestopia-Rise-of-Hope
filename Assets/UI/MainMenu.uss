@@ -28,12 +28,16 @@
     border-bottom-color: rgb(255, 255, 255);
     width: 130px;
     height: 37px;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
     font-size: 20px;
     color: rgb(255, 255, 255);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out-cubic;
+    background-color: rgb(119, 217, 115);
+    -unity-text-outline-color: rgba(190, 117, 117, 0.63);
 }
 
 .Buttons:hover {
@@ -60,4 +64,12 @@
     align-items: flex-start;
     width: 50%;
     min-width: 200px;
+}
+
+.hide {
+    flex-grow: 1;
+    visibility: visible;
+    display: none;
+    height: 50px;
+    width: 200px;
 }
