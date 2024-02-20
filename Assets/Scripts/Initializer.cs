@@ -13,5 +13,6 @@ public class Initializer : MonoBehaviour
     {
         DialogueManager.Instance.Initialize(dialogueUI);
         ChoicesManager.Initialize(choicesUI, ChoiceCard);
+        ResourcesManager.Initialize();
     }
 }
