@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private UIDocument interactionUi;
     private VisualElement intractionRoot;
-    private Interaction playerInteraction; 
+    private Interaction playerInteraction;
+
+    private Vector2 playerVelocity = Vector2.zero;
 
     // Start is called before the first frame update
     void Start()
@@ -51,31 +53,30 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
+        playerVelocity.x = playerSpeed * horizontalInput * Time.deltaTime;
+        playerVelocity.y = playerSpeed * verticalInput * Time.deltaTime;
+
         if (horizontalInput > 0)
         {
             playerSprite.sprite = backSprite;
-            PlayerRb.velocity = Vector3.right * playerSpeed * horizontalInput * Time.deltaTime;
-
         }
-        else if (horizontalInput < 0)
+        if (horizontalInput < 0)
         {
             playerSprite.sprite = frontSprite;
-            PlayerRb.velocity = Vector3.right * playerSpeed * horizontalInput * Time.deltaTime;
         }
-        else if (verticalInput > 0)
+        if (verticalInput > 0)
         {
             playerSprite.sprite = rightSprite;
-            PlayerRb.velocity = Vector3.up * playerSpeed * verticalInput * Time.deltaTime;
         }
-        else if (verticalInput < 0)
+        if (verticalInput < 0)
         {
             playerSprite.sprite = leftSprite;
-            PlayerRb.velocity = Vector3.up * playerSpeed * verticalInput * Time.deltaTime;
-
         }
-        else
-            PlayerRb.velocity = Vector3.zero;
-
+        if (horizontalInput == 0 && verticalInput == 0) 
+        {
+            playerVelocity = Vector2.zero;
+        }
+        PlayerRb.velocity = playerVelocity;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

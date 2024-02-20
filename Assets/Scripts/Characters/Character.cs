@@ -12,16 +12,16 @@ public abstract class Character : MonoBehaviour
     protected new string name;
 
     protected List<Scenario> CharacterScenarios = new List<Scenario>();
-    int indx = 0;
+    int index = 0;
     public virtual Scenario GetNextScenario()
     {
-        if (indx < CharacterScenarios.Count)
+        if (index < CharacterScenarios.Count)
         {
-            return CharacterScenarios[indx++];
+            return CharacterScenarios[index++];
         }
         else {
             Scenario scenario = new Scenario();
-            scenario.Push(new Dialogue(name, "Hallo King", avatar));
+            scenario.Push(new Dialogue(name, "Hello King", avatar));
             return scenario;
         }
     }
