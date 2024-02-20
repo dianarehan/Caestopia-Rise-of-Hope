@@ -19,7 +19,8 @@ public abstract class Character : MonoBehaviour
         {
             return CharacterScenarios[index++];
         }
-        else {
+        else 
+        {
             Scenario scenario = new Scenario();
             scenario.Push(new Dialogue(name, "Hello King", avatar));
             return scenario;

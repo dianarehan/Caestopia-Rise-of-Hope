@@ -3,21 +3,37 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class RoyalCounsler : Character
+public class RoyalCounsellor : Character
 {
     // Start is called before the first frame update
     void Start()
     {
-        Scenario scenario1 = new Scenario();
-        scenario1.Push(new Dialogue( name, " my lord, I’ll Help you rule the City but" +
-            " you have to make some tough choices, do you understand?", avatar));
-        List<Choice>choices = new List<Choice>()
+        // First Scenario
+        Scenario scenario = new Scenario();
+        scenario.Push(new Dialogue(name, " my lord, I’ll Help you rule the City but " +
+            "you have to make some tough choices, do you understand?", avatar));
+        
+        scenario.Push(new Question("Do You Agree?", new List<Choice>()
         {
             new Choice("YES", Yes1),
             new Choice("No", No1)
-        };
-        scenario1.Push(new Question("Do You Agree?", choices));
-        CharacterScenarios.Add(scenario1);
+        }));
+        CharacterScenarios.Add(scenario);
+
+
+        // Sceond Scenario
+        scenario = new Scenario();
+        scenario.Push(new Dialogue(name, "OOPS !! There is an Emergency :(!", avatar));
+        scenario.Push(new Dialogue(name, "I have to go to the bathroom.\n" +
+            "I trust you can make the perfect decisions, until I come back", avatar));
+        /*
+        scenario.Push(new Question("Kill the Counsellor ?", new List<Choice>()
+        {
+            new Choice("Kill Him", )
+        }));
+        */
+
+        CharacterScenarios.Add(scenario);
     }
 
     void Yes1()
