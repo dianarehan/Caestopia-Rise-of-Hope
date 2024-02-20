@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 0; flex-shrink: 0; width: 60%; height: 60%; top: 20%; align-self: center; background-color: rgba(255, 255, 255, 0.87); border-left-color: rgba(0, 0, 0, 0.92); border-right-color: rgba(0, 0, 0, 0.92); border-top-color: rgba(0, 0, 0, 0.92); border-bottom-color: rgba(0, 0, 0, 0.92); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 13px; border-top-right-radius: 13px; border-bottom-right-radius: 13px; border-bottom-left-radius: 13px; justify-content: center;">
+        <ui:VisualElement name="Img" style="flex-grow: 0; flex-shrink: 0; align-self: center; width: 40%; height: 40%; display: flex;" />
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Message" style="width: auto; height: auto; align-self: center; -unity-text-align: middle-center;" />
+    </ui:VisualElement>
+</ui:UXML>
