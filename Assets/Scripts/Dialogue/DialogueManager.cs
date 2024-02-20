@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     private VisualElement root;
 
     private Dialogue headDialogue;
+    private UnityAction actionAfter;
 
     public static DialogueManager Instance
     {
@@ -41,6 +42,7 @@ public class DialogueManager : MonoBehaviour
 
     public void Initialize(UIDocument _dialogueTemplate)
     {
+        actionAfter = null;
         dialogueTemplate = _dialogueTemplate;
         root = dialogueTemplate.rootVisualElement;
         charName = root.Q<Label>("CharName");
@@ -66,6 +68,11 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 root.style.display = DisplayStyle.None;
+                if (actionAfter != null)
+                {
+                    actionAfter.Invoke();
+                    actionAfter = null;
+                }
             }
         });
 
@@ -98,5 +105,11 @@ public class DialogueManager : MonoBehaviour
 
         root.style.display = DisplayStyle.Flex;
         StopAndStartCoroutine(BindDialogue());
+    }
+
+    public void ShowDialogue(Dialogue _headDialogue, UnityAction _actoinAfter)
+    {
+        this.actionAfter = _actoinAfter;
+        ShowDialogue(_headDialogue);  
     }
 }

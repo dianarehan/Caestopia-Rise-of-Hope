@@ -2,14 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Scenario
 {
     private List<ScenarioBaseClass> scenarioSequences;
 
+    private UnityAction actoinAfter;
+
     public Scenario()
     {
         scenarioSequences = new List<ScenarioBaseClass>();
+        actoinAfter = null;
     }
 
     public void Push(List<Dialogue> dialoguesList)
@@ -49,6 +53,13 @@ public class Scenario
 
     public void StartScenario()
     {
+        if (actoinAfter != null)
+        {
+            StartScenario(actoinAfter);
+            return;
+        }
+
+
         if (scenarioSequences.Count > 0) 
         {
             if (scenarioSequences[0] is Dialogue)
@@ -62,5 +73,26 @@ public class Scenario
         }
         scenarioSequences.Clear();
     }
-    
+
+    private void StartScenario(UnityAction actionAfter)
+    {
+        if (scenarioSequences.Count > 0)
+        {
+            if (scenarioSequences[0] is Dialogue)
+            {
+                DialogueManager.Instance.ShowDialogue((Dialogue)scenarioSequences[0], actionAfter);
+            }
+            else if (scenarioSequences[0] is Question)
+            {
+                ChoicesManager.ShowChoices((Question)scenarioSequences[0], actionAfter);
+            }
+        }
+        scenarioSequences.Clear();
+    }
+
+    public void SetActionAfter(UnityAction actionAfter)
+    {
+        this.actoinAfter = actionAfter;
+    }
+
 }

@@ -18,6 +18,7 @@ public class RoyalCounsellor : Character
             new Choice("YES", Yes1),
             new Choice("No", No1)
         }));
+        scenario.SetActionAfter(KillHim);
         CharacterScenarios.Add(scenario);
 
 
@@ -32,7 +33,7 @@ public class RoyalCounsellor : Character
             new Choice("Kill Him", )
         }));
         */
-
+        scenario.SetActionAfter(KillHim);
         CharacterScenarios.Add(scenario);
     }
 
@@ -50,5 +51,11 @@ public class RoyalCounsellor : Character
         Scenario scenario1 = new Scenario();
         scenario1.Push(new Dialogue("King", "haha funny just give the people some answers.", avatar));
         scenario1.StartScenario();
+    }
+
+    void KillHim()
+    {
+        // - happiness
+        Debug.Log("DONNNEEEE");
     }
 }

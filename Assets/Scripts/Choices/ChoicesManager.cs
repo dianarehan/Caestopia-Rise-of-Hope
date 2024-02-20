@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 public static class ChoicesManager 
@@ -9,10 +10,14 @@ public static class ChoicesManager
     private static VisualTreeAsset choiceCard;
     private static VisualElement root;
     private static VisualElement choicesList;
-    private static Label questionLable; 
+    private static Label questionLable;
+
+    private static UnityAction actionAfter;
 
     public static void Initialize(UIDocument choicesUI, VisualTreeAsset _choiceCard)
     {
+        actionAfter = null;
+
         root = choicesUI.rootVisualElement;
         choiceCard = _choiceCard;
         choicesList = root.Q<VisualElement>("ChoicesList");
@@ -34,6 +39,8 @@ public static class ChoicesManager
             choiceBut.text = choice.Name;
             choiceBut.clicked += () => {
                 choice.Action.Invoke();
+                if (actionAfter != null) actionAfter.Invoke();
+                actionAfter = null;
                 if (choice.NxtItem != null ) 
                 {
                     if (choice.NxtItem is Question)
@@ -51,5 +58,11 @@ public static class ChoicesManager
             };
             choicesList.Add(_choice);
         }
+    }
+
+    public static void ShowChoices(Question question, UnityAction _actionAfter)
+    {
+        actionAfter = _actionAfter;
+        ShowChoices(question);
     }
 }
