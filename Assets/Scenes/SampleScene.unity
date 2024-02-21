@@ -682,7 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af25168281830634b88dc5a882fc644c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatar: {fileID: 21300000, guid: c75368721284d4b41a4248c7e2663bf0, type: 3}
+  avatar: {fileID: 21300000, guid: 7df429f225e2a4448bf9800bfe621ccc, type: 3}
   name: Counsellor
 --- !u!1 &1183382154
 GameObject:

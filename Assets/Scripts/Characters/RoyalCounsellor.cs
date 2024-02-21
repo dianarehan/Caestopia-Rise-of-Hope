@@ -64,7 +64,8 @@ public class RoyalCounsellor : Character
 
     void KillHim()
     {
-        // - happiness
+        ResourcesManager.AddHappiness(-15);
+        ResourcesManager.AddLoyality(-45);
         Destroy(gameObject);
     }
     void WaitForHim()
