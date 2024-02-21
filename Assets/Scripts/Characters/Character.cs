@@ -10,6 +10,9 @@ public abstract class Character : MonoBehaviour
     protected Sprite avatar;
 
     [SerializeField]
+    protected Sprite kingAvatar;
+
+    [SerializeField]
     protected new string name;
 
     protected Scenario firstScenario;
@@ -20,6 +23,10 @@ public abstract class Character : MonoBehaviour
     protected virtual void Start() 
     {
         characterMovement = GetComponent<CharacterMovement>(); 
+    }
+    protected void Leave()
+    {
+        characterMovement.Leave();
     }
     protected void SetFirstScenario(Scenario scenario)
     {

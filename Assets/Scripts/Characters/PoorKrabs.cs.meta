@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 4bdc656e1a9fe0945bc3d388ab289be9
+guid: 5b01e10350041844292cb3eca7268d09
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - avatar: {instanceID: 0}
-  - kingAvatar: {fileID: 21300000, guid: 77d3a379f37cff942b9951327db7f827, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

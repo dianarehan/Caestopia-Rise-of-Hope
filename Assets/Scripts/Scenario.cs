@@ -17,7 +17,7 @@ public class Scenario
     {
         foreach (var dialogue in dialoguesList) 
         {
-            scenarioSequences.Add(dialogue);
+            Push(dialogue);
         }
     }
 

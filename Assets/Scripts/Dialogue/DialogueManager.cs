@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char c in newText)
         {
             label.text += c;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
         }
     }
 
