@@ -42,8 +42,8 @@ public class CharacterMovement : MonoBehaviour
         if (isEntring && elapsedTrinsform >= 1)
         {
             isEntring = false;
-            GetComponent<Interaction>().StartInteraction();
-            Leave();
+            GetComponent<Character>().StartFirstScenario();
+
             // TernOf the Animation;
         }
 

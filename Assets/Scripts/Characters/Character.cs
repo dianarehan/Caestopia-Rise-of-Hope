@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Character : MonoBehaviour
 {
@@ -11,19 +12,27 @@ public abstract class Character : MonoBehaviour
     [SerializeField]
     protected new string name;
 
-    protected List<Scenario> CharacterScenarios = new List<Scenario>();
-    int index = 0;
-    public virtual Scenario GetNextScenario()
+    protected Scenario firstScenario;
+    protected UnityAction firstActionAfter;
+
+    protected CharacterMovement characterMovement;
+
+    protected virtual void Start() 
     {
-        if (index < CharacterScenarios.Count)
-        {
-            return CharacterScenarios[index++];
-        }
-        else 
-        {
-            Scenario scenario = new Scenario();
-            scenario.Push(new Dialogue(name, "Hello King", avatar));
-            return scenario;
-        }
+        characterMovement = GetComponent<CharacterMovement>(); 
+    }
+    protected void SetFirstScenario(Scenario scenario)
+    {
+        this.firstScenario = scenario;
+        this.firstActionAfter = null;
+    }
+    protected void SetFirstScenario(Scenario scenario, UnityAction actionAfter)
+    {
+        this.firstScenario = scenario;
+        this.firstActionAfter = actionAfter;
+    }
+    public void StartFirstScenario()
+    {
+        firstScenario.StartScenario(firstActionAfter);
     }
 }

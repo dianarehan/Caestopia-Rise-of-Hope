@@ -6,7 +6,7 @@ public class DialougeInteraction : Interaction
 {
     public override void StartInteraction()
     {
-        Character character = GetComponent<Character>();
-        character.GetNextScenario().StartScenario();
+        //Character character = GetComponent<Character>();
+        //character.GetNextScenario().StartScenario();
     }
 }

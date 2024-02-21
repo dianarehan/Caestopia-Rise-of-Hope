@@ -51,6 +51,12 @@ public class DialogueManager : MonoBehaviour
 
         root.RegisterCallback((ClickEvent evt) => 
         {
+            // CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK
+            // AAAAAAAAAAAAAAAAAAAAAAAAAAAA3333333333333333333333333333333333333333
+            // AAAAAAAA33333333333333 6 HOURS DEBUGGING AAAAAAAAAAA3333333333333333
+            // AAAAAAAAAAAAAAAAAAAAAAAAAAAA3333333333333333333333333333333333333333
+            // CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK
+
             if (headDialogue.NxtItem != null)
             {
                 if (headDialogue.NxtItem is Dialogue) 
@@ -71,7 +77,6 @@ public class DialogueManager : MonoBehaviour
                 if (actionAfter != null)
                 {
                     actionAfter.Invoke();
-                    actionAfter = null;
                 }
             }
         });
@@ -101,15 +106,16 @@ public class DialogueManager : MonoBehaviour
 
     public void ShowDialogue(Dialogue _headDialogue) 
     {
-        this.headDialogue = _headDialogue;
-
-        root.style.display = DisplayStyle.Flex;
-        StopAndStartCoroutine(BindDialogue());
+        this.actionAfter = null;
+        ShowDialogue(_headDialogue, actionAfter);
     }
 
     public void ShowDialogue(Dialogue _headDialogue, UnityAction _actoinAfter)
     {
+        this.headDialogue = _headDialogue;
         this.actionAfter = _actoinAfter;
-        ShowDialogue(_headDialogue);  
+
+        root.style.display = DisplayStyle.Flex;
+        StopAndStartCoroutine(BindDialogue());
     }
 }

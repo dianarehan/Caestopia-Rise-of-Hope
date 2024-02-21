@@ -8,12 +8,9 @@ public class Scenario
 {
     private List<ScenarioBaseClass> scenarioSequences;
 
-    private UnityAction actoinAfter;
-
     public Scenario()
     {
         scenarioSequences = new List<ScenarioBaseClass>();
-        actoinAfter = null;
     }
 
     public void Push(List<Dialogue> dialoguesList)
@@ -53,28 +50,11 @@ public class Scenario
 
     public void StartScenario()
     {
-        if (actoinAfter != null)
-        {
-            StartScenario(actoinAfter);
-            return;
-        }
-
-
-        if (scenarioSequences.Count > 0) 
-        {
-            if (scenarioSequences[0] is Dialogue)
-            {
-                DialogueManager.Instance.ShowDialogue((Dialogue)scenarioSequences[0]);
-            }
-            else if (scenarioSequences[0] is Question) 
-            {
-                ChoicesManager.ShowChoices((Question)scenarioSequences[0]);
-            }
-        }
-        scenarioSequences.Clear();
+        StartScenario(null);
     }
 
-    private void StartScenario(UnityAction actionAfter)
+    // The system ignores the actionAfter function if the scenario ends with a question
+    public void StartScenario(UnityAction actionAfter)
     {
         if (scenarioSequences.Count > 0)
         {
@@ -84,15 +64,9 @@ public class Scenario
             }
             else if (scenarioSequences[0] is Question)
             {
-                ChoicesManager.ShowChoices((Question)scenarioSequences[0], actionAfter);
+                ChoicesManager.ShowChoices((Question)scenarioSequences[0]);
             }
         }
         scenarioSequences.Clear();
     }
-
-    public void SetActionAfter(UnityAction actionAfter)
-    {
-        this.actoinAfter = actionAfter;
-    }
-
 }
