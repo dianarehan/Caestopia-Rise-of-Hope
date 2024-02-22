@@ -26,7 +26,6 @@ public class CharTest : Character
         scenario.Push(new Dialogue(name, "Hello my king i have a problem.", avatar));
         scenario.Push(new Dialogue(name, "a goat of mine was eating the new elctropizza happy meal, but a hard chip cut its neck and killed it.\n" +
             "I want to get money as a compensation for the damage.", avatar));
-        scenario
         scenarios.Enqueue(scenario);
     }
     protected override void Start()
