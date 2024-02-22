@@ -55,7 +55,7 @@ public class CharacterMovement : MonoBehaviour
         if (isLeaving && elapsedTrinsform >= 1)
         {
             isLeaving = false;
-            Destroy(gameObject);
+            Kill();
 
             chareAnimator.SetBool("back", false);
             // TernOf the Animation;
@@ -84,4 +84,9 @@ public class CharacterMovement : MonoBehaviour
         // Run Leaving Animation;
     }
 
+    public void Kill()
+    {
+        Destroy(gameObject);
+        CharacterSpawner.SpwanNewCharacter();
+    }
 }

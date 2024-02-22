@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0a01c00da90bf1d499d6b8ebc2c39f0e
+guid: c20b48ee8d65e7b45a97b23832ae6144
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: counselloranimation_0
+      name: poorcharacteranimation_0
       rect:
         serializedVersion: 2
-        x: 211
-        y: 0
-        width: 258
-        height: 720
+        x: 277
+        y: 32
+        width: 312
+        height: 844
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 253fc4b03c4231848a3324f37ef0ea51
-      internalID: 984975294
+      spriteID: bbbab410c2c21ea4e98f83bfc1bb2c5a
+      internalID: 1762741769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: counselloranimation_1
+      name: poorcharacteranimation_1
       rect:
         serializedVersion: 2
-        x: 939
-        y: 0
-        width: 258
-        height: 720
+        x: 1174
+        y: 39
+        width: 312
+        height: 837
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b3edbad7415d7b4786a5e4da3fb3467
-      internalID: -1835323035
+      spriteID: 88238bb0fb39cd14eac707eb313ce600
+      internalID: -1420976366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: counselloranimation_2
+      name: poorcharacteranimation_2
       rect:
         serializedVersion: 2
-        x: 1666
-        y: 0
-        width: 259
-        height: 720
+        x: 2068
+        y: 39
+        width: 312
+        height: 837
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84fdca548a52f0642a3bbc16e903984d
-      internalID: 1861833636
+      spriteID: 867dc2df6649c3d4fab0db9f3b66bea6
+      internalID: 2132050070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: counselloranimation_3
+      name: poorcharacteranimation_3
       rect:
         serializedVersion: 2
-        x: 2394
-        y: 0
-        width: 259
-        height: 720
+        x: 2962
+        y: 39
+        width: 308
+        height: 837
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d58c25403224d27448dc957d61dfd3f6
-      internalID: -1075311672
+      spriteID: a42919f568431be48ad8e02edc76e7d3
+      internalID: 1972012769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: counselloranimation_4
+      name: poorcharacteranimation_4
       rect:
         serializedVersion: 2
-        x: 3122
-        y: 0
-        width: 258
-        height: 720
+        x: 3855
+        y: 32
+        width: 305
+        height: 844
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cafcdc75e257874d8b65b3bd7fd087b
-      internalID: -231387031
+      spriteID: 15af923c2a422b146841f1715c8987c3
+      internalID: -191430924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: counselloranimation_5
+      name: poorcharacteranimation_5
       rect:
         serializedVersion: 2
-        x: 3844
-        y: 0
-        width: 264
-        height: 720
+        x: 4746
+        y: 32
+        width: 308
+        height: 844
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 523775f23b0d43349b99409ef1b5b0ff
-      internalID: 1930416744
+      spriteID: 53548d9f8697abc46a244e06f48b8a15
+      internalID: -1887131000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: counselloranimation_6
+      name: poorcharacteranimation_6
       rect:
         serializedVersion: 2
-        x: 4546
-        y: 0
-        width: 258
-        height: 720
+        x: 5640
+        y: 32
+        width: 312
+        height: 844
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21a06238a7987a442af48522ca2d7745
-      internalID: -1273568794
+      spriteID: d9fc9c5885925ad4791c0648dff38dc9
+      internalID: 1990886543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: counselloranimation_7
+      name: poorcharacteranimation_7
       rect:
         serializedVersion: 2
-        x: 5268
-        y: 0
-        width: 264
-        height: 720
+        x: 6533
+        y: 32
+        width: 312
+        height: 844
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,155 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee153245033408c4e9d6db1bbb388a03
-      internalID: -1070555125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: counselloranimation_8
-      rect:
-        serializedVersion: 2
-        x: 5996
-        y: 0
-        width: 264
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ede16e0cbb71368488695485080ab7ca
-      internalID: -2102930531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: counselloranimation_9
-      rect:
-        serializedVersion: 2
-        x: 6692
-        y: 0
-        width: 264
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e52eef2f8edfe04b8e5935f12b15edf
-      internalID: 35845148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: counselloranimation_10
-      rect:
-        serializedVersion: 2
-        x: 7420
-        y: 0
-        width: 263
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1459e8df4db087b429d7fe57ba29a5aa
-      internalID: 710922560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: counselloranimation_11
-      rect:
-        serializedVersion: 2
-        x: 8147
-        y: 0
-        width: 264
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 888e89e86ec50dd4ab6cb9489eeeb479
-      internalID: -743383691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: counselloranimation_12
-      rect:
-        serializedVersion: 2
-        x: 8875
-        y: 0
-        width: 264
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50d14cc6606c4e54dbcd478f74917340
-      internalID: 460675497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: counselloranimation_13
-      rect:
-        serializedVersion: 2
-        x: 9577
-        y: 0
-        width: 258
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d87f3416d4a824f488aec3ee9426514a
-      internalID: -1193893083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: counselloranimation_14
-      rect:
-        serializedVersion: 2
-        x: 10273
-        y: 0
-        width: 263
-        height: 715
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa89ce95b4dada94dae9848399ce5af6
-      internalID: 2135935352
+      spriteID: 640d6d24b52f299468d793e9bde248ca
+      internalID: -444659536
       vertices: []
       indices: 
       edges: []
@@ -448,21 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      counselloranimation_0: 984975294
-      counselloranimation_1: -1835323035
-      counselloranimation_10: 710922560
-      counselloranimation_11: -743383691
-      counselloranimation_12: 460675497
-      counselloranimation_13: -1193893083
-      counselloranimation_14: 2135935352
-      counselloranimation_2: 1861833636
-      counselloranimation_3: -1075311672
-      counselloranimation_4: -231387031
-      counselloranimation_5: 1930416744
-      counselloranimation_6: -1273568794
-      counselloranimation_7: -1070555125
-      counselloranimation_8: -2102930531
-      counselloranimation_9: 35845148
+      poorcharacteranimation_0: 1762741769
+      poorcharacteranimation_1: -1420976366
+      poorcharacteranimation_2: 2132050070
+      poorcharacteranimation_3: 1972012769
+      poorcharacteranimation_4: -191430924
+      poorcharacteranimation_5: -1887131000
+      poorcharacteranimation_6: 1990886543
+      poorcharacteranimation_7: -444659536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
