@@ -683,14 +683,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a5f9cc1d62646241b8f8335e827e35a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Characters:
   - {fileID: 1097775167286323156, guid: b4952da7cc1738e4a8d0109493138f07, type: 3}
-  - {fileID: 7876602724424023299, guid: 286b6e4ef6943bb449cbc1f4a914e75a, type: 3}
+  - {fileID: 1097775167286323156, guid: b4952da7cc1738e4a8d0109493138f07, type: 3}
 --- !u!1 &571976080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,7 +1904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1097775167286323156, guid: b4952da7cc1738e4a8d0109493138f07, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1510740829225930108, guid: b4952da7cc1738e4a8d0109493138f07, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1948,7 +1948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1976196851988567660, guid: b4952da7cc1738e4a8d0109493138f07, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
