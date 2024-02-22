@@ -107,9 +107,9 @@ GameObject:
   - component: {fileID: 2936329769456212005}
   - component: {fileID: 6423450559507179953}
   - component: {fileID: 7520891640056522887}
-  - component: {fileID: 1976196851988567660}
   - component: {fileID: 2149777290643446307}
   - component: {fileID: 3923989352194513490}
+  - component: {fileID: 4648055815787169527}
   m_Layer: 0
   m_Name: counsellor
   m_TagString: Untagged
@@ -198,21 +198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endTransform: {fileID: 8421109285064314482}
   startTransform: {fileID: 7431087715226250322}
---- !u!114 &1976196851988567660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7985050599532698558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af25168281830634b88dc5a882fc644c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  avatar: {fileID: 21300000, guid: 7df429f225e2a4448bf9800bfe621ccc, type: 3}
-  kingAvatar: {fileID: 21300000, guid: 77d3a379f37cff942b9951327db7f827, type: 3}
-  name: Counsellor
 --- !u!114 &2149777290643446307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,3 +231,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4648055815787169527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7985050599532698558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50728147e078f674ea777bc64f2f1d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatar: {fileID: 21300000, guid: 7df429f225e2a4448bf9800bfe621ccc, type: 3}
+  kingAvatar: {fileID: 21300000, guid: 77d3a379f37cff942b9951327db7f827, type: 3}
+  name: t

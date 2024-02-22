@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class Scenario
 {
     private List<ScenarioBaseClass> scenarioSequences;
+    private UnityAction unityActionAfter;
 
     public Scenario()
     {
@@ -53,6 +54,10 @@ public class Scenario
         StartScenario(null);
     }
 
+    public void SetUnityActionAfter(UnityAction unityAction)
+    {
+        this.unityActionAfter = unityAction;
+    }
     // The system ignores the actionAfter function if the scenario ends with a question
     public void StartScenario(UnityAction actionAfter)
     {
