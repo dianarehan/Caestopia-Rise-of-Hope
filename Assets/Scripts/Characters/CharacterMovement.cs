@@ -10,6 +10,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private Transform startTransform;
 
+    Animator chareAnimator;
+
     private bool isEntring = false;
     private bool isLeaving = false;
 
@@ -25,8 +27,10 @@ public class CharacterMovement : MonoBehaviour
         transform.position = startTransform.position;
         transform.localScale = startTransform.localScale;
 
+        chareAnimator = GetComponent<Animator>();
+
         isEntring = true;
-        // Run The Enter Animation;
+        chareAnimator.SetBool("front", true);
 
     }
 
@@ -44,6 +48,7 @@ public class CharacterMovement : MonoBehaviour
             isEntring = false;
             GetComponent<Character>().StartFirstScenario();
 
+            chareAnimator.SetBool("front", false);
             // TernOf the Animation;
         }
 
@@ -51,6 +56,8 @@ public class CharacterMovement : MonoBehaviour
         {
             isLeaving = false;
             Destroy(gameObject);
+
+            chareAnimator.SetBool("back", false);
             // TernOf the Animation;
         }
     }
@@ -72,6 +79,8 @@ public class CharacterMovement : MonoBehaviour
 
         isLeaving = true;
         elapsedTrinsform = 0;
+
+        chareAnimator.SetBool("back", true);
         // Run Leaving Animation;
     }
 
