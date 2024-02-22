@@ -10,6 +10,7 @@ public class CharTest : Character
 
     void InitScenarios()
     {
+        
         Scenario scenario = new Scenario();
         scenario.Push(new Dialogue(name, "Hello my king i have a problem.", avatar));
         scenario.Push(new Dialogue(name, "a goat of mine was eating the new elctropizza happy meal, but a hard chip cut its neck and killed it.\n" +
@@ -21,11 +22,13 @@ public class CharTest : Character
             new Choice("ahmmmm, you are poor it's better to be killed now", Scenario2)
         }));
         scenarios.Enqueue(scenario);
+        
 
         scenario = new Scenario();
         scenario.Push(new Dialogue(name, "Hello my king i have a problem.", avatar));
         scenario.Push(new Dialogue(name, "a goat of mine was eating the new elctropizza happy meal, but a hard chip cut its neck and killed it.\n" +
             "I want to get money as a compensation for the damage.", avatar));
+        scenario.SetActionAfter(() => { Debug.Log("wa7ed rbk hwa el wa7ed"); });
         scenarios.Enqueue(scenario);
     }
     protected override void Start()
@@ -39,7 +42,9 @@ public class CharTest : Character
         }
         
         if ( scenarios.Count > 0 )
+        {
             SetFirstScenario(scenarios.Dequeue());
+        }
     }
 
     void YouAreLiar()

@@ -31,7 +31,7 @@ public abstract class Character : MonoBehaviour
     protected void SetFirstScenario(Scenario scenario)
     {
         this.firstScenario = scenario;
-        this.firstActionAfter = null;
+        this.firstActionAfter = scenario.ActionAfter;
     }
     protected void SetFirstScenario(Scenario scenario, UnityAction actionAfter)
     {
