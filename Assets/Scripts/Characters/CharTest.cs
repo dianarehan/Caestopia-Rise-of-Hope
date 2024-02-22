@@ -51,7 +51,7 @@ public class CharTest : Character
     {
         ResourcesManager.AddMoney(50);
         ResourcesManager.AddHappiness(-20);
-        ResourcesManager.AddLoyality(-20);
+        ResourcesManager.AddPopulation(-20);
         Leave();
     }
     void Pay200()
