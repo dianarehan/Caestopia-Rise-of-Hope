@@ -5,12 +5,13 @@ using UnityEngine.PlayerLoop;
 
 public class CharTest : Character
 {
-    static Queue<Scenario> scenarios = new Queue<Scenario>();
-    static bool isFirstTimeSpawned= false;
+    static List<Scenario> scenarios = new List<Scenario>();
+    static int index = 0;
 
-    void InitScenarios()
+    protected override void Start()
     {
-        
+        base.Start();
+
         Scenario scenario = new Scenario();
         scenario.Push(new Dialogue(name, "Hello my king i have a problem.", avatar));
         scenario.Push(new Dialogue(name, "a goat of mine was eating the new elctropizza happy meal, but a hard chip cut its neck and killed it.\n" +
@@ -21,29 +22,22 @@ public class CharTest : Character
             new Choice("Walla a3teh 200 coins", Pay200),
             new Choice("ahmmmm, you are poor it's better to be killed now", Scenario2)
         }));
-        scenarios.Enqueue(scenario);
-        
+
+        scenarios.Add(scenario);
+
 
         scenario = new Scenario();
         scenario.Push(new Dialogue(name, "Hello my king i have a problem.", avatar));
         scenario.Push(new Dialogue(name, "a goat of mine was eating the new elctropizza happy meal, but a hard chip cut its neck and killed it.\n" +
             "I want to get money as a compensation for the damage.", avatar));
-        scenario.SetActionAfter(() => { Debug.Log("wa7ed rbk hwa el wa7ed"); });
-        scenarios.Enqueue(scenario);
-    }
-    protected override void Start()
-    {
-        base.Start();
+        scenario.SetActionAfter(Leave);
+        scenarios.Add(scenario);
 
-        if (!isFirstTimeSpawned ) 
+        if (scenarios.Count > index)
         {
-            isFirstTimeSpawned = true;
-            InitScenarios();
-        }
-        
-        if ( scenarios.Count > 0 )
-        {
-            SetFirstScenario(scenarios.Dequeue());
+            SetFirstScenario(scenarios[index]);
+            scenarios.Clear();
+            index++;
         }
     }
 
