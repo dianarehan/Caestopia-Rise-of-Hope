@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class IntroElement
@@ -39,12 +40,16 @@ public class IntroSequence : MonoBehaviour
         {
             NextText();
         }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     IEnumerator ShowImageAndText()
     {
         // Fade out the current image and text
-        yield return FadeOut(image, fadeDuration);
+        StartCoroutine(FadeOut(image, fadeDuration));
         yield return FadeOut(text, fadeDuration);
 
         // Display the current image
@@ -90,20 +95,17 @@ public class IntroSequence : MonoBehaviour
         else
         {
             Debug.Log("End of intro sequence");
-            // You may want to add logic here to handle the end of the intro sequence,
-            // such as loading the next scene or starting the game.
         }
     }
 
     void NextText()
     {
-        // Skip to the next text immediately
         if (textCoroutine != null)
         {
-            StopCoroutine(textCoroutine);
             textIndex++;
             if (textIndex < introElements[imageIndex].texts.Count)
             {
+                StopCoroutine(textCoroutine);
                 textCoroutine = StartCoroutine(ShowText());
             }
         }
@@ -111,7 +113,7 @@ public class IntroSequence : MonoBehaviour
 
     IEnumerator FadeIn(Graphic graphic, float duration)
     {
-        graphic.gameObject.SetActive(true); // Ensure the object is active before fading in
+        graphic.gameObject.SetActive(true);
         float timer = 0f;
         Color startColor = graphic.color;
         Color targetColor = new Color(startColor.r, startColor.g, startColor.b, 1f);
@@ -142,6 +144,6 @@ public class IntroSequence : MonoBehaviour
         }
 
         graphic.color = targetColor;
-        graphic.gameObject.SetActive(false); // Ensure the object is inactive after fading out
+        graphic.gameObject.SetActive(false);
     }
 }
