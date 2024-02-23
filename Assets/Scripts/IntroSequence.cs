@@ -16,7 +16,7 @@ public class IntroSequence : MonoBehaviour
 {
     public Image image;
     public Text text;
-
+    //public TextMesh text;
     public IntroElement[] introElements;
 
     public float textDelay = 2f;
@@ -26,7 +26,7 @@ public class IntroSequence : MonoBehaviour
     private int imageIndex = 0;
     private int textIndex = 0;
     private Coroutine textCoroutine;
-
+    public float typingSpeed = 1f;
     void Start()
     {
         // Start the intro sequence
@@ -95,8 +95,52 @@ public class IntroSequence : MonoBehaviour
         else
         {
             Debug.Log("End of intro sequence");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
+   /* IEnumerator ShowText()
+    {
+        string currentText = introElements[imageIndex].texts[textIndex];
+        text.text = ""; // Clear the text initially
+
+        
+        for (int i = 0; i <= currentText.Length; i++)
+        {
+            text.text = currentText.Substring(0, i); 
+            yield return new WaitForSeconds(typingSpeed); 
+        }
+
+      
+        yield return new WaitForSeconds(textDelay);
+
+        
+        textIndex++;
+
+        
+        if (textIndex < introElements[imageIndex].texts.Count)
+        {
+            StartCoroutine(ShowText());
+        }
+        else
+        {
+           
+            yield return new WaitForSeconds(transitionDelay);
+
+           
+            imageIndex++;
+
+            if (imageIndex < introElements.Length)
+            {
+                StartCoroutine(ShowImageAndText());
+            }
+            else
+            {
+                Debug.Log("End of intro sequence");
+            }
+        }
+    }*/
+
 
     void NextText()
     {
