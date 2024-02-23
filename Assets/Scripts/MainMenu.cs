@@ -25,12 +25,11 @@ public class MainMenu : MonoBehaviour
         });
         var optionsButton = root.Q<VisualElement>("settings-button");
         var optionsContainer = root.Q<VisualElement>("OptionsContainer");
-        optionsContainer.AddToClassList("hide");
+        //optionsContainer.AddToClassList("hide");
         optionsButton.RegisterCallback<MouseUpEvent>(ev =>
         {
             audioSource.PlayOneShot(clip);
 
-            // Toggle the 'hide' class on optionsContainer when the button is clicked
             optionsContainer.ToggleInClassList("hide");
         });
         var startButton = root.Q<Button>("start-button");
