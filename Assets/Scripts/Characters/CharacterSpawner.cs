@@ -11,6 +11,8 @@ public class CharacterSpawner : MonoBehaviour
     [SerializeField]
     GameObject specialLowPopulation;
 
+    bool IsSpecialLowMony = true;
+
     static float elapsedTime = 0f;
     static float duration = 3f;
     static bool isStart = false;
@@ -46,7 +48,7 @@ public class CharacterSpawner : MonoBehaviour
         {
             int random = Random.Range(0,2);
             int random2 = Random.Range(0,10);
-            if (ResourcesManager.Money < 10 )
+            if (ResourcesManager.Money < 10 && IsSpecialLowMony)
             {
                 if (random == 0) 
                 {
@@ -58,6 +60,7 @@ public class CharacterSpawner : MonoBehaviour
                     RoyalGuard.isSpecialLowMony = true;
                     Instantiate(specialLowMony[1]);
                 }
+                IsSpecialLowMony = false;
             }
             else if (ResourcesManager.Population > 150 && specialLowPopulation != null)
             {
