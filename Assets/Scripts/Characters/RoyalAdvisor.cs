@@ -121,7 +121,7 @@ public class RoyalAdvisor: Character
         scenario.Push(new Question("Shall we hire workers to clean it up?", new List<Choice>()
         {
             new Choice ("Yes",Yes3),
-            new Choice("Yes",No3)
+            new Choice("No",No3)
         }));
         scenario.StartScenario();
     }
@@ -156,7 +156,7 @@ public class RoyalAdvisor: Character
         scenario.Push(new Question("Should we welcome them?", new List<Choice>()
         {
             new Choice ("Yes",Yes4),
-            new Choice("Yes",No4)
+            new Choice("No",No4)
         }));
         scenario.StartScenario();
     }
@@ -188,7 +188,7 @@ public class RoyalAdvisor: Character
         scenario.Push(new Question("Shall we allocate resources for medical aid and quarantine measures?", new List<Choice>()
         {
             new Choice ("Yes",Yes5),
-            new Choice("Yes",No5)
+            new Choice("No",No5)
         }));
         scenario.StartScenario();
     }
@@ -222,7 +222,7 @@ public class RoyalAdvisor: Character
         scenario.Push(new Question("Should we try?", new List<Choice>()
         {
             new Choice ("Yes",Yes6),
-            new Choice("NO",No6)
+            new Choice("No",No6)
         }));
         SetFirstScenario(scenario);
     }
