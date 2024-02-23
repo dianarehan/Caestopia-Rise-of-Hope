@@ -26,7 +26,7 @@ public class IntroSequence : MonoBehaviour
     private int imageIndex = 0;
     private int textIndex = 0;
     private Coroutine textCoroutine;
-    public float typingSpeed = 1f;
+   // public float typingSpeed = 1f;
     void Start()
     {
         // Start the intro sequence
@@ -63,7 +63,7 @@ public class IntroSequence : MonoBehaviour
         textCoroutine = StartCoroutine(ShowText());
     }
 
-   /* IEnumerator ShowText()
+    IEnumerator ShowText()
     {
         // Display each text for the current image
         while (textIndex < introElements[imageIndex].texts.Count)
@@ -98,8 +98,8 @@ public class IntroSequence : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
-    }*/
-    IEnumerator ShowText()
+    }
+   /* IEnumerator ShowText()
     {
         string currentText = introElements[imageIndex].texts[textIndex];
         text.text = ""; // Clear the text initially
@@ -141,7 +141,7 @@ public class IntroSequence : MonoBehaviour
 
             }
         }
-    }
+    }*/
 
 
     void NextText()
