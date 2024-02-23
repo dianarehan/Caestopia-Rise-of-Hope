@@ -35,7 +35,7 @@ public class Wich : Character
             scenario.Push(new Dialogue(name, "Oops, that was not meant to happen, I guess " +
                 "the spell turned out to be evil.", avatar));
             scenario.StartScenario(Scenario2);
-            ResourcesManager.AddPopulation(-5);
+            ResourcesManager.AddPopulation(-15);
         }
 
     }
@@ -43,7 +43,7 @@ public class Wich : Character
     void No1()
     {
         Scenario scenario = new Scenario();
-        scenario.Push(new Dialogue(name, " I see you do not like taking risks, Fair enough!!", avatar));
+        scenario.Push(new Dialogue(name, "I see you do not like taking risks, Fair enough!!", avatar));
         scenario.StartScenario(Scenario2);
     }
 
@@ -56,7 +56,7 @@ public class Wich : Character
             new Choice ("Yes",Yes2),
             new Choice("NO",No2)
         }));
-        scenario.StartScenario();
+        //scenario.StartScenario();
     }
 
     void Yes2() 

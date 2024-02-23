@@ -23,7 +23,7 @@ public class TheUndertaker : Character
         {
             new Choice("How much money do you have?", HowMuchMoney),
             new Choice("What's bothering you?", WhatHappend),
-            new Choice("Whoa, I'm not going to be part of this. Leave now.", LessHappyAndLeave)
+            new Choice("I'm not going to be part of this. Leave now.", LessHappyAndLeave)
         }));
         SetFirstScenario(scenario);
     }
@@ -34,7 +34,7 @@ public class TheUndertaker : Character
         scenario.Push(new List<Dialogue>()
         {
             new Dialogue(name, "45 coins", avatar),
-            new Dialogue("King", "So, you're thinking of this because you're broke. " +
+            new Dialogue("King", "So, you're thinking of this because you're broke." +
             "There are easier ways to get help.", kingAvatar),
             new Dialogue(name, "It's not about the money.", avatar),
             new Dialogue("King", "It's about what ?", kingAvatar)
@@ -48,7 +48,7 @@ public class TheUndertaker : Character
         {
             new Dialogue(name, "I've had some really bad stuff happen.", avatar),
             new Dialogue("King", "Go ahead, tell me.", kingAvatar),
-            new Dialogue(name, "my true love ....", avatar),
+            new Dialogue(name, "My real love ....", avatar),
             new Dialogue(name, "She left me. She was everything to me, literally everything.", avatar),
             new Dialogue("King", "When did this happen?", kingAvatar),
             new Dialogue(name, "some months ago.", avatar),
@@ -58,7 +58,7 @@ public class TheUndertaker : Character
         scenario.Push(new Question("What will you say?", new List<Choice>()
         {
             new Choice("Your life is worth more than this; you don't deserve to give up.", YourLifeWorth),
-            new Choice("Consider the reasons; you'll see a brighter path.", ConsiderTheReasons),
+            new Choice("Consider the reasons, you'll see a brighter path.", ConsiderTheReasons),
 
         }));
         scenario.StartScenario();

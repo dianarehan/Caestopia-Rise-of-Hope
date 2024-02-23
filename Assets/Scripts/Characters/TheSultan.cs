@@ -11,12 +11,12 @@ public class TheSultan : Character
         base.Start();
 
         Scenario scenario = new Scenario();
-        scenario.Push(new Dialogue(name, "A wealthy merchant offers to invest in the city's" +
+        scenario.Push(new Dialogue(name, "A wealthy ruler in a neighbouring city offers to invest in the city's" +
             " infrastructure in exchange for exclusive trading rights.", avatar));
         scenario.Push(new Question("What's your opinion", new List<Choice>()
         {
-            new Choice("YES", Yes1),
-            new Choice("NO: We better maintain autonomy", No1)
+            new Choice("Yes", Yes1),
+            new Choice("No, We better maintain autonomy", No1)
         }));
         SetFirstScenario(scenario);
     }
@@ -40,8 +40,8 @@ public class TheSultan : Character
             " you and your little city, are you interested?", avatar));
         scenario.Push(new Question("Are you interested", new List<Choice>()
         {
-            new Choice("YES", Yes2),
-            new Choice("NO", No2)
+            new Choice("Yes", Yes2),
+            new Choice("No", No2)
         }));
         scenario.StartScenario();
     }

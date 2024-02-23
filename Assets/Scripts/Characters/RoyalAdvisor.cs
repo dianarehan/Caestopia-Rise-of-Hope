@@ -32,10 +32,10 @@ public class RoyalAdvisor: Character
         Scenario scenario = new Scenario();
         scenario.Push(new Dialogue( name, "My lord, I’ll help you rule the city, but you" +
             " have to make some tough choices.", avatar));
-        scenario.Push(new Question("do you understand ?", new List<Choice>()
+        scenario.Push(new Question("Do you understand?", new List<Choice>()
         {
             new Choice ("Yes",Yes1),
-            new Choice("NO",No1)
+            new Choice("No",No1)
         }));
 
         scenarios.Add(scenario);
@@ -69,14 +69,16 @@ public class RoyalAdvisor: Character
     void Scenario2()
     {
         Scenario scenario = new Scenario();
-        scenario.Push(new Dialogue(name, "Your Majesty, Mason and David are locked in a " +
-            "dispute over land ownership.", avatar));
+        scenario.Push(new Dialogue(name, "Your Majesty, Mason and David are back again, these two citizens keep arguing each " +
+            "one of them claims his that he owns this property, and they are kinda causing chaos in the city.", avatar));
 
-        scenario.Push(new Dialogue(name, "Mason, descendant from the Royal family, seeks to" +
-            " reclaim ancestral lands lost during the apocalypse", avatar));
+        scenario.Push(new Dialogue(name, "Mason, descendant from the Royal family who was a part of this Reverse we are living right now, seeks to" +
+            " reclaim ancestral lands lost during the apocalypse..", avatar));
 
-        scenario.Push(new Dialogue(name, "Meanwhile, David, a former farmer, turned a desolate " +
-            "land into a flourished community.", avatar));
+        scenario.Push(new Dialogue(name, "Meanwhile, David, a former farmer,David led his family and fellow survivors on a journey of survival.", avatar));
+        scenario.Push(new Dialogue(name, "After months of hardship, they stumbled upon the abandoned property on the outskirts of the kingdom.", avatar));
+        scenario.Push(new Dialogue(name, "He toiled day and night, clearing the land, planting crops, and building shelters for the displaced survivors.", avatar));
+        scenario.Push(new Dialogue(name, "As the years passed, David's community flourished, but as you see they are threatend by the return of the kingdom's rulers who want to take back their propert.", avatar));
 
         scenario.Push(new Question("Who has the right to take this land?", new List<Choice>()
         {
@@ -89,7 +91,7 @@ public class RoyalAdvisor: Character
     void Mason() 
     {
         Scenario scenario = new Scenario();
-        scenario.Push(new Dialogue(name, "You are right!! As sins of the ancestors" +
+        scenario.Push(new Dialogue(name, "You are right!! Because sins of the ancestors" +
             " should not be visited upon the descendants.", avatar));
 
         scenario.StartScenario(Scenario3);
@@ -103,8 +105,7 @@ public class RoyalAdvisor: Character
     void David () 
     {
         Scenario scenario = new Scenario();
-        scenario.Push(new Dialogue(name, "You are right!! As sins of the ancestors" +
-            " should not be visited upon the descendants.", avatar));
+        scenario.Push(new Dialogue(name, "You are right!!  As this land is not just their homes, but their hopes and dreams for a better future after what Mason’s Ancestors have done.", avatar));
 
         scenario.StartScenario(Scenario3);
 
@@ -134,7 +135,7 @@ public class RoyalAdvisor: Character
         scenario.StartScenario(Scenario4);
 
         ResourcesManager.AddHappiness(5);
-        ResourcesManager.AddMoney(-20);
+        ResourcesManager.AddMoney(-0);
     }
 
     void No3 ()
