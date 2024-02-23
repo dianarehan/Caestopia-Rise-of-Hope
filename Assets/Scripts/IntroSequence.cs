@@ -63,7 +63,7 @@ public class IntroSequence : MonoBehaviour
         textCoroutine = StartCoroutine(ShowText());
     }
 
-    IEnumerator ShowText()
+   /* IEnumerator ShowText()
     {
         // Display each text for the current image
         while (textIndex < introElements[imageIndex].texts.Count)
@@ -98,8 +98,8 @@ public class IntroSequence : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
-    }
-   /* IEnumerator ShowText()
+    }*/
+    IEnumerator ShowText()
     {
         string currentText = introElements[imageIndex].texts[textIndex];
         text.text = ""; // Clear the text initially
@@ -137,9 +137,11 @@ public class IntroSequence : MonoBehaviour
             else
             {
                 Debug.Log("End of intro sequence");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
             }
         }
-    }*/
+    }
 
 
     void NextText()
