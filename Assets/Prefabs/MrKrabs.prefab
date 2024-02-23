@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b01e10350041844292cb3eca7268d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatar: {fileID: 21300000, guid: 7df429f225e2a4448bf9800bfe621ccc, type: 3}
+  avatar: {fileID: 21300000, guid: 907ba2d7e62e1e24bb9a941822747fc9, type: 3}
   kingAvatar: {fileID: 21300000, guid: 77d3a379f37cff942b9951327db7f827, type: 3}
   name: Poor Krabs
 --- !u!95 &1340981428979335741

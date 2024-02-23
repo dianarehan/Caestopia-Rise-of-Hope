@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9546e050c0e0c4e4ea4543af6aa21634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatar: {fileID: 21300000, guid: 458b0af9ab5027646a129ec952a38c64, type: 3}
+  avatar: {fileID: 21300000, guid: 8365cd8278090454ead832a0cf7c51f3, type: 3}
   kingAvatar: {fileID: 21300000, guid: 77d3a379f37cff942b9951327db7f827, type: 3}
   name: Wich
 --- !u!114 &1065596283453740988
