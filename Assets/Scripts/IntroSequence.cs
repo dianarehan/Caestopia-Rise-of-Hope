@@ -108,7 +108,7 @@ public class IntroSequence : MonoBehaviour
         {
             SceneManager.LoadScene("Gameplay");
         }
-        else if (cur == "WinOutro" || cur == "LoseOurt")
+        else if (cur == "WinOutro" || cur == "LoseOutro")
         {
             SceneManager.LoadScene("MainMenu");
         }

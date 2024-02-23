@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterSpawner : MonoBehaviour
 {
@@ -36,9 +37,12 @@ public class CharacterSpawner : MonoBehaviour
             elapsedTime = 0f;
         }
 
-        if (characters.Count < 0 && isStart)
+        if (characters.Count < 1 && isStart)
         {
-            // Game Over
+            if (ResourcesManager.Money < 10 || ResourcesManager.Population < 10 || ResourcesManager.Happiness < 10)
+                SceneManager.LoadScene("LoseOutro");
+            else
+                SceneManager.LoadScene("WinOutro");
         }
     }
 
