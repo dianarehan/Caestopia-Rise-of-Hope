@@ -25,7 +25,7 @@ public class Wich : Character
             Scenario scenario = new Scenario();
             scenario.Push(new Dialogue(name, "I told you anything could happen, enjoy the gold.", avatar));
 
-            scenario.StartScenario();
+            scenario.StartScenario(Scenario2);
 
             ResourcesManager.AddMoney(5);
         }

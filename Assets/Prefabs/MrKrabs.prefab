@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 876286662, guid: cad991d55c2465c468fea332faff3418, type: 3}
+  m_Sprite: {fileID: -1497617278, guid: d1b8fbc2cb8603e419f37f14b4ffa793, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b01e10350041844292cb3eca7268d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatar: {fileID: 21300000, guid: 907ba2d7e62e1e24bb9a941822747fc9, type: 3}
+  avatar: {fileID: 21300000, guid: 030e66770955e714a9e8ea305474710b, type: 3}
   kingAvatar: {fileID: 21300000, guid: 77d3a379f37cff942b9951327db7f827, type: 3}
   name: Poor Krabs
 --- !u!95 &1340981428979335741
@@ -139,7 +139,7 @@ Animator:
   m_GameObject: {fileID: 746593624239188965}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 640900e35ad75604ba1a10616fe4ee59, type: 2}
+  m_Controller: {fileID: 9100000, guid: e304e2c14e38f024a8bc12d41a7f3fb3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
