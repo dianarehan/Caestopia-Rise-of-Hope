@@ -56,8 +56,6 @@ public class CharacterMovement : MonoBehaviour
         {
             isLeaving = false;
             Kill();
-
-            chareAnimator.SetBool("back", false);
             // TernOf the Animation;
         }
     }
@@ -80,7 +78,8 @@ public class CharacterMovement : MonoBehaviour
         isLeaving = true;
         elapsedTrinsform = 0;
 
-        chareAnimator.SetBool("back", true);
+        chareAnimator.SetBool("front", true);
+        characterSpeed = .2f;
         // Run Leaving Animation;
     }
 
