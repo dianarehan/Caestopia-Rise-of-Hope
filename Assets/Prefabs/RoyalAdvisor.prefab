@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1510740829225930108}
   m_Layer: 0
-  m_Name: Counsellor
+  m_Name: RoyalAdvisor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 2149777290643446307}
   - component: {fileID: 6755591993019120442}
   m_Layer: 0
-  m_Name: counsellor
+  m_Name: RoyalAdvisor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
