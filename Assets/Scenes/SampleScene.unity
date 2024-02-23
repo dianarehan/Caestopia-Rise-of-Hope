@@ -818,8 +818,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
+  - {fileID: 7024497046434459636, guid: 6df6aa0fa4a37d84583fd66009451368, type: 3}
   - {fileID: 1097775167286323156, guid: 3864fc3884814ee46897d65d57ab284d, type: 3}
-  - {fileID: 7096583039410674535, guid: 13f48cfdc6792074480d90e59248393d, type: 3}
   specialLowMony:
   - {fileID: 1097775167286323156, guid: 3864fc3884814ee46897d65d57ab284d, type: 3}
   - {fileID: 7096583039410674535, guid: 13f48cfdc6792074480d90e59248393d, type: 3}
