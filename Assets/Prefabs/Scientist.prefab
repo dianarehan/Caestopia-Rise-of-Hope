@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59487912b34a83c47aefe1f1513930c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatar: {fileID: 21300000, guid: a9ed4c2ccb4a7a54c8a8a1be869eabb8, type: 3}
+  avatar: {fileID: 21300000, guid: b11aa7394042eb3409e51e3f56dd8ec8, type: 3}
   kingAvatar: {fileID: 21300000, guid: 5ea8a1a9a0378664e9909a0415275526, type: 3}
   name: The Scientist
 --- !u!95 &2379589342121793599

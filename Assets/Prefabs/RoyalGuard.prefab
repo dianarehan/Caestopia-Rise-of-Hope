@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e820a059387ed3845a5cf792065dd740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatar: {fileID: 21300000, guid: ed36001c967855c4e977da3e69936d27, type: 3}
+  avatar: {fileID: 21300000, guid: 08520329af411a24b811f1ab1c4026a0, type: 3}
   kingAvatar: {fileID: 21300000, guid: 77d3a379f37cff942b9951327db7f827, type: 3}
   name: RoyalGuard
   royalAdvisorAvatar: {fileID: 0}
