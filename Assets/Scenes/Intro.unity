@@ -254,9 +254,8 @@ MonoBehaviour:
   - background: {fileID: 21300000, guid: b547798b316dc3b4487fbdab30055915, type: 3}
     texts: []
   textDelay: 6
-  transitionDelay: 1
+  transitionDelay: 3
   fadeDuration: 1
-  typingSpeed: 1
 --- !u!4 &1044883829
 Transform:
   m_ObjectHideFlags: 0
