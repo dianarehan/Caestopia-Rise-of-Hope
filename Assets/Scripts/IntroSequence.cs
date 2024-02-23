@@ -65,6 +65,7 @@ public class IntroSequence : MonoBehaviour
 
     IEnumerator ShowText()
     {
+        int x = text.text.Length / 100;
         // Display each text for the current image
         while (textIndex < introElements[imageIndex].texts.Count)
         {
@@ -78,7 +79,7 @@ public class IntroSequence : MonoBehaviour
             yield return FadeIn(text, fadeDuration);
 
             // Wait for the text delay
-            yield return new WaitForSeconds(textDelay);
+            yield return new WaitForSeconds(textDelay );
             textIndex++;
         }
 

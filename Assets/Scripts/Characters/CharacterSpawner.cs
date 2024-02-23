@@ -5,7 +5,11 @@ using UnityEngine;
 public class CharacterSpawner : MonoBehaviour
 {
     [SerializeField]
-    List<GameObject> Characters;
+    List<GameObject> characters;
+    [SerializeField]
+    List<GameObject> specialLowMony;
+    [SerializeField]
+    GameObject specialLowPopulation;
 
     static float elapsedTime = 0f;
     static float duration = 3f;
@@ -29,18 +33,43 @@ public class CharacterSpawner : MonoBehaviour
             isStart = false;
             elapsedTime = 0f;
         }
+
+        if (characters.Count < 0 && isStart)
+        {
+            // Game Over
+        }
     }
 
     void InstantiateCharacter()
     {
-        if (Characters.Count > 0)
+        if (characters.Count > 0)
         {
-            Instantiate(Characters[0]);
-            Characters.RemoveAt(0);
-        }
-        else
-        {
-            // Game Over
+            int random = Random.Range(0,2);
+            int random2 = Random.Range(0,10);
+            if (ResourcesManager.Money < 10 )
+            {
+                if (random == 0) 
+                {
+                    RoyalAdvisor.isSpecialLowMony = true;
+                    Instantiate(specialLowMony[0]);
+                }
+                else
+                {
+                    RoyalGuard.isSpecialLowMony = true;
+                    Instantiate(specialLowMony[1]);
+                }
+            }
+            else if (ResourcesManager.Population > 150 && specialLowPopulation != null)
+            {
+                RoyalAdvisor.isSpecialLowPopulation = true;
+                Instantiate(specialLowPopulation);
+                specialLowPopulation = null;
+            }
+            else
+            {
+                Instantiate(characters[0]);
+                characters.RemoveAt(0);
+            }
         }
 
     }

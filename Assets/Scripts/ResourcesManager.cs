@@ -20,7 +20,7 @@ public class ResourcesManager : MonoBehaviour
 
     public static void Initialize()
     {
-        happiness = 50; money = 200; population = 100;
+        happiness = 50; money = 200; population = 160;
         resourcesUI = GameObject.Find("Resources Manager").GetComponent<UIDocument>();
         SetVisualElement();
         UpdateVisualEmelent();
