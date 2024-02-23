@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 937949942308730727}
   m_Layer: 0
-  m_Name: Wich
+  m_Name: Witch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 1065596283453740988}
   - component: {fileID: 6018803262365425968}
   m_Layer: 0
-  m_Name: Wich
+  m_Name: Witch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatar: {fileID: 21300000, guid: 8365cd8278090454ead832a0cf7c51f3, type: 3}
   kingAvatar: {fileID: 21300000, guid: 77d3a379f37cff942b9951327db7f827, type: 3}
-  name: Wich
+  name: Witch
 --- !u!114 &1065596283453740988
 MonoBehaviour:
   m_ObjectHideFlags: 0
