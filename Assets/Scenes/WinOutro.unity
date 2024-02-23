@@ -252,10 +252,17 @@ MonoBehaviour:
   image: {fileID: 492424800}
   text: {fileID: 535568120}
   introElements:
-  - background: {fileID: 21300000, guid: b547798b316dc3b4487fbdab30055915, type: 3}
+  - background: {fileID: 21300000, guid: 28a882b6743aeec4ea438e220156cf5b, type: 3}
     texts:
-    - Year is 2099, 3rd day of the last month of the year, Sorrow. Exactly 99 years
-      since the collapse of the old empire.
+    - 'People are happy and the city is growing, through wise decision-making, effective
+      management, and balancing the needs of the people, the city flourishes into
+      a utopian society. '
+  - background: {fileID: 21300000, guid: 28a882b6743aeec4ea438e220156cf5b, type: 3}
+    texts:
+    - 'Happiness is high, resources are plentiful, and the city becomes a beacon
+      of hope and prosperity in the post-apocalyptic world, Congratulations, your
+      majesty, you saved the city of Caestopia from the brink of ruin by avoiding
+      the ancestor''s faults.  '
   textDelay: 6
   transitionDelay: 3
   fadeDuration: 1
