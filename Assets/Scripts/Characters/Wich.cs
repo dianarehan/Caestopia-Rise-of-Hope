@@ -56,7 +56,7 @@ public class Wich : Character
             new Choice ("Yes",Yes2),
             new Choice("NO",No2)
         }));
-        //scenario.StartScenario();
+        scenario.StartScenario();
     }
 
     void Yes2() 

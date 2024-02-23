@@ -40,6 +40,11 @@ public class RoyalAdvisor: Character
 
         scenarios.Add(scenario);
 
+        Scenario2();
+        Scenario3();
+        Scenario4();
+        Scenario5();
+
         if (scenarios.Count > index)
         {
             SetFirstScenario(scenarios[index]);
@@ -55,7 +60,7 @@ public class RoyalAdvisor: Character
             "but it has the potential to grow.", avatar));
         scenario.Push(new Dialogue(name, "For now, you have to keep the citizens happy and grow our city", avatar));
         scenario.Push(new Dialogue(name, "Good Luck sir!!", avatar));
-        scenario.StartScenario(Scenario2);
+        scenario.StartScenario(Leave);
 
     }
 
@@ -63,7 +68,7 @@ public class RoyalAdvisor: Character
     {
         Scenario scenario = new Scenario();
         scenario.Push(new Dialogue(name, "HAHAHA! Funny, just give the people some answers.", avatar));
-        scenario.StartScenario(Scenario2);
+        scenario.StartScenario(Leave);
     }
 
     void Scenario2()
@@ -85,7 +90,7 @@ public class RoyalAdvisor: Character
             new Choice ("Give it back to Mason.",Mason),
             new Choice("Take David's side this time.",David)
         }));
-        scenario.StartScenario();
+        scenarios.Add(scenario);
     }
 
     void Mason() 
@@ -94,7 +99,7 @@ public class RoyalAdvisor: Character
         scenario.Push(new Dialogue(name, "You are right!! Because sins of the ancestors" +
             " should not be visited upon the descendants.", avatar));
 
-        scenario.StartScenario(Scenario3);
+        scenario.StartScenario(Leave);
 
         ResourcesManager.AddPopulation(-30);
         ResourcesManager.AddHappiness(-50);
@@ -107,7 +112,7 @@ public class RoyalAdvisor: Character
         Scenario scenario = new Scenario();
         scenario.Push(new Dialogue(name, "You are right!!  As this land is not just their homes, but their hopes and dreams for a better future after what Mason’s Ancestors have done.", avatar));
 
-        scenario.StartScenario(Scenario3);
+        scenario.StartScenario(Leave);
 
         ResourcesManager.AddPopulation(-20);
         ResourcesManager.AddHappiness(13);
@@ -124,7 +129,7 @@ public class RoyalAdvisor: Character
             new Choice ("Yes",Yes3),
             new Choice("No",No3)
         }));
-        scenario.StartScenario();
+        scenarios.Add(scenario);
     }
 
     void Yes3 ()
@@ -132,7 +137,7 @@ public class RoyalAdvisor: Character
         Scenario scenario = new Scenario();
         scenario.Push(new Dialogue(name, "The villagers noses will thank you for sure.", avatar));
 
-        scenario.StartScenario(Scenario4);
+        scenario.StartScenario(Leave);
 
         ResourcesManager.AddHappiness(5);
         ResourcesManager.AddMoney(-50);
@@ -144,7 +149,7 @@ public class RoyalAdvisor: Character
         scenario.Push(new Dialogue(name, "Maybe we could solve this later, but we got bigger" +
             " issues right now!!", avatar));
 
-        scenario.StartScenario(Scenario4);
+        scenario.StartScenario(Leave);
 
         ResourcesManager.AddHappiness(-5);
     }
@@ -159,14 +164,14 @@ public class RoyalAdvisor: Character
             new Choice ("Yes, our city is open to anyone.",Yes4),
             new Choice("No, we must think about the resources before taking any decisions.",No4)
         }));
-        scenario.StartScenario();
+        scenarios.Add(scenario);
     }
     void Yes4 () 
     {
         Scenario scenario = new Scenario();
         scenario.Push(new Dialogue(name, "That is great. The city is growing more and more.", avatar));
 
-        scenario.StartScenario(Scenario5);
+        scenario.StartScenario(Leave);
 
         ResourcesManager.AddPopulation(12);
         ResourcesManager.AddHappiness(5);
@@ -177,7 +182,7 @@ public class RoyalAdvisor: Character
         Scenario scenario = new Scenario();
         scenario.Push(new Dialogue(name, "But.. why? Well, as you wish.", avatar));
 
-        scenario.StartScenario(Scenario5);
+        scenario.StartScenario(Leave);
     }
 
     void Scenario5()
@@ -191,7 +196,7 @@ public class RoyalAdvisor: Character
             new Choice ("Yes",Yes5),
             new Choice("No",No5)
         }));
-        scenario.StartScenario();
+        scenarios.Add(scenario);
     }
     void Yes5()
     {

@@ -57,7 +57,7 @@ public class RoyalGuard : Character
     void NotNow()
     {
         ResourcesManager.AddHappiness(5);
-        //Scenario2();
+        Scenario2();
     }
 
     void Scenario2 ()

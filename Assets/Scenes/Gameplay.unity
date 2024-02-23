@@ -229,11 +229,15 @@ MonoBehaviour:
   characters:
   - {fileID: 1097775167286323156, guid: 3864fc3884814ee46897d65d57ab284d, type: 3}
   - {fileID: 6892590871967836019, guid: 46d69fe372bb4064d966c587354e8787, type: 3}
+  - {fileID: 1097775167286323156, guid: 3864fc3884814ee46897d65d57ab284d, type: 3}
   - {fileID: 7096583039410674535, guid: 13f48cfdc6792074480d90e59248393d, type: 3}
   - {fileID: 3905145872622671337, guid: fb4bd9eb268d6ef4e8ff6364e7a15d19, type: 3}
+  - {fileID: 1097775167286323156, guid: 3864fc3884814ee46897d65d57ab284d, type: 3}
   - {fileID: 7024497046434459636, guid: 6df6aa0fa4a37d84583fd66009451368, type: 3}
+  - {fileID: 1097775167286323156, guid: 3864fc3884814ee46897d65d57ab284d, type: 3}
   - {fileID: 7876602724424023299, guid: 6152e14390d874f44b8d859349b3ec4c, type: 3}
   - {fileID: 2602858863507441908, guid: 9cd0f817e3c46b246a3cedc67309abf8, type: 3}
+  - {fileID: 1097775167286323156, guid: 3864fc3884814ee46897d65d57ab284d, type: 3}
   - {fileID: 1006461613648325576, guid: 6d2a374b19caeb2409e38613be3285c2, type: 3}
   specialLowMony:
   - {fileID: 1097775167286323156, guid: 3864fc3884814ee46897d65d57ab284d, type: 3}
@@ -291,7 +295,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -316,7 +320,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
