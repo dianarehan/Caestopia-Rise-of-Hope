@@ -19,7 +19,7 @@
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
     -unity-font-style: normal;
-    -unity-text-outline-width: 5px;
+    -unity-text-outline-width: 1px;
     -unity-text-outline-color: rgb(0, 0, 0);
 }
 
