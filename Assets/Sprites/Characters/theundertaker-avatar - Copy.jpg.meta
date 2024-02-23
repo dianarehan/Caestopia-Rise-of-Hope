@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 145c806c68fed0844bab2a7d0a03e3eb
+guid: 9dcd1f08633de7142853728514ab8038
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,91 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: richcharacteranimation_0
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 101
-        width: 533
-        height: 779
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46f10737b3ff070408da71a0aea364f8
-      internalID: -658211987
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: richcharacteranimation_1
-      rect:
-        serializedVersion: 2
-        x: 1101
-        y: 101
-        width: 526
-        height: 779
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4128f766a1a7bc24cad55a5d7a2ee3d7
-      internalID: 1318882181
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: richcharacteranimation_2
-      rect:
-        serializedVersion: 2
-        x: 1994
-        y: 101
-        width: 535
-        height: 779
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ea0b311fdd93a64394539cf6cb48b70
-      internalID: 2142258718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: richcharacteranimation_3
-      rect:
-        serializedVersion: 2
-        x: 2896
-        y: 101
-        width: 526
-        height: 780
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 898e15beaa1e500438e605a8f921a727
-      internalID: -2023996598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -216,11 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      richcharacteranimation_0: -658211987
-      richcharacteranimation_1: 1318882181
-      richcharacteranimation_2: 2142258718
-      richcharacteranimation_3: -2023996598
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

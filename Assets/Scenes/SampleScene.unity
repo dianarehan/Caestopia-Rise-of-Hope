@@ -689,8 +689,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Characters:
+  - {fileID: 2602858863507441908, guid: 9cd0f817e3c46b246a3cedc67309abf8, type: 3}
+  - {fileID: 2602858863507441908, guid: 9cd0f817e3c46b246a3cedc67309abf8, type: 3}
   - {fileID: 3905145872622671337, guid: fb4bd9eb268d6ef4e8ff6364e7a15d19, type: 3}
-  - {fileID: 1097775167286323156, guid: b4952da7cc1738e4a8d0109493138f07, type: 3}
 --- !u!1 &571976080
 GameObject:
   m_ObjectHideFlags: 0
