@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -36,10 +37,10 @@ public class RoyalGuard : Character
         Scenario scenario = new Scenario();
         scenario.Push(new Dialogue(name, "Representatives from neighboring tribes " +
             "seek an alliance with the city for mutual protection and trade", avatar));
-        scenario.Push(new Question("Do You Will Alliance With Them ?", new List<Choice>()
+        scenario.Push(new Question("Will you ally with them?", new List<Choice>()
         {
-            new Choice ("Yes",Yes1),
-            new Choice("Not Now",NotNow)
+            new Choice ("Yes.",Yes1),
+            new Choice("Not now.",NotNow)
         }));
         SetFirstScenario(scenario);
     }
@@ -48,14 +49,15 @@ public class RoyalGuard : Character
     {
         ResourcesManager.AddPopulation(20);
         ResourcesManager.AddHappiness(-5);
-        ResourcesManager.AddMoney(-20);
+        ResourcesManager.AddMoney(-25);
         Scenario2();
+       
     }
 
     void NotNow()
     {
         ResourcesManager.AddHappiness(5);
-        Scenario2();
+        //Scenario2();
     }
 
     void Scenario2 ()
@@ -117,7 +119,7 @@ public class RoyalGuard : Character
     void No3 ()
     {
         Scenario scenario = new Scenario();
-        scenario.Push(new Dialogue(name, "Oh dear… I told my friends I’d be there", avatar));
+        scenario.Push(new Dialogue(name, "Oh dear… I told my friends I’d be there.", avatar));
 
         scenario.StartScenario(Leave);
         ResourcesManager.AddHappiness(-5);

@@ -21,8 +21,8 @@ public class Scientist : Character
                 " Might I request the donation for a few skilled workers?", avatar));
             profitScenario.Push(new Question("Choose", new List<Choice>()
             {
-                new Choice("YES", SpecYes1),
-                new Choice("NO", SpecNo1)
+                new Choice("Yes", SpecYes1),
+                new Choice("No", SpecNo1)
             }));
             SetFirstScenario(profitScenario);
             return;
@@ -35,7 +35,7 @@ public class Scientist : Character
         Scenario scenario = new Scenario();
         scenario.Push(new List<Dialogue>()
         {
-            new Dialogue(name, " Greetings, Your Majesty. I bring news from the laboratories." +
+            new Dialogue(name, "Greetings, Your Majesty. I bring news from the laboratories." +
             " We've made a breakthrough in our research on Azor and its applications in technology.", avatar),
             new Dialogue(name, "With your support, we can unlock the true potential of Azor." +
             " This will require a couple of hundreds of gold and time, but the benefits could" +
@@ -61,9 +61,9 @@ public class Scientist : Character
         Scenario scenario = new Scenario();
         scenario.Push(new List<Dialogue>()
         {
-            new Dialogue(name, "I understand, Your Majesty." +
+           /* new Dialogue(name, "I understand, Your Majesty." +
             " We shall continue our research with the resources available." +
-            " However, progress may be slower than desired", avatar),
+            " However, progress may be slower than desired", avatar),*/
             new Dialogue(name, "Your Majesty. While our research on Azor is important," +
             " We shall focus on the immediate needs of the city. However," +
             " I urge you not to forget the potential it holds for our city's advancement", avatar)
