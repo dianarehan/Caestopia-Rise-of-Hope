@@ -3,10 +3,10 @@
     -unity-font-definition: url('project://database/Assets/Fonts/ThaleahFat_TTF%20SDF.asset?fileID=11400000&guid=d1f31a470535c0f4eab6f017371f1aa2&type=2#ThaleahFat_TTF SDF');
     height: 27px;
     background-color: rgba(149, 103, 103, 0.07);
-    border-left-color: rgb(126, 111, 112);
-    border-right-color: rgb(126, 111, 112);
-    border-top-color: rgb(126, 111, 112);
-    border-bottom-color: rgb(126, 111, 112);
+    border-left-color: rgb(152, 210, 212);
+    border-right-color: rgb(152, 210, 212);
+    border-top-color: rgb(152, 210, 212);
+    border-bottom-color: rgb(152, 210, 212);
     border-top-width: 4px;
     border-right-width: 4px;
     border-bottom-width: 4px;
@@ -17,7 +17,7 @@
     border-bottom-left-radius: 8px;
     width: 130px;
     font-size: 20px;
-    color: rgb(174, 202, 204);
+    color: rgb(41, 36, 36);
     -unity-text-align: middle-center;
     -unity-font-style: normal;
     -unity-text-outline-width: 1px;
@@ -55,7 +55,7 @@
 .screen {
     flex-grow: 1;
     align-items: center;
-    background-image: url('project://database/Assets/background_0.png?fileID=2800000&guid=5114a7963d03d5f48b405bdd4fcc9051&type=3#background_0');
+    background-image: url('project://database/Assets/Sprites/Backgrounds/background_0.png?fileID=2800000&guid=5114a7963d03d5f48b405bdd4fcc9051&type=3#background_0');
     -unity-background-scale-mode: scale-and-crop;
 }
 

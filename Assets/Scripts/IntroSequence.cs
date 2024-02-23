@@ -42,7 +42,7 @@ public class IntroSequence : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            GoToNextScene();
         }
     }
 
@@ -96,10 +96,24 @@ public class IntroSequence : MonoBehaviour
         else
         {
             Debug.Log("End of intro sequence");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            GoToNextScene();
 
         }
     }
+
+    void GoToNextScene()
+    {
+        string cur = SceneManager.GetActiveScene().name;
+        if (cur == "Intro")
+        {
+            SceneManager.LoadScene("Gameplay");
+        }
+        else if (cur == "WinOutro" || cur == "LoseOurt")
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
+
    /* IEnumerator ShowText()
     {
         string currentText = introElements[imageIndex].texts[textIndex];
