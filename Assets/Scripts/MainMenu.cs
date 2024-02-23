@@ -9,12 +9,11 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     AudioSource audioSource;
     public AudioClip clip;
+    
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-    }
-    private void Awake()
-    {
+
         var root = document.rootVisualElement;
         var VolumeSlider = root.Q<SliderInt>("VolumeSlider");
         VolumeSlider.RegisterValueChangedCallback(evt =>
@@ -37,7 +36,7 @@ public class MainMenu : MonoBehaviour
         {
             audioSource.PlayOneShot(clip);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    ;        });
+        });
         var exitButton = root.Q<Button>("exit-button");
         exitButton.RegisterCallback<MouseUpEvent>(ev =>
         {
