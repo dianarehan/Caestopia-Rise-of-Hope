@@ -82,8 +82,8 @@ public class RoyalAdvisor: Character
 
         scenario.Push(new Question("Who has the right to take this land?", new List<Choice>()
         {
-            new Choice ("Mason",Mason),
-            new Choice("David",David)
+            new Choice ("Give it back to Mason.",Mason),
+            new Choice("Take David's side this time.",David)
         }));
         scenario.StartScenario();
     }
@@ -98,7 +98,7 @@ public class RoyalAdvisor: Character
 
         ResourcesManager.AddPopulation(-30);
         ResourcesManager.AddHappiness(-50);
-        ResourcesManager.AddMoney(100);
+        ResourcesManager.AddMoney(300);
 
     }
 
@@ -135,7 +135,7 @@ public class RoyalAdvisor: Character
         scenario.StartScenario(Scenario4);
 
         ResourcesManager.AddHappiness(5);
-        ResourcesManager.AddMoney(-0);
+        ResourcesManager.AddMoney(-50);
     }
 
     void No3 ()
@@ -152,12 +152,12 @@ public class RoyalAdvisor: Character
     void Scenario4() 
     {
         Scenario scenario = new Scenario();
-        scenario.Push(new Dialogue(name, "Some refugees, arrived in the city", avatar));
+        scenario.Push(new Dialogue(name, "Some refugees, arrived in the city, Should we welcome them?", avatar));
 
-        scenario.Push(new Question("Should we welcome them?", new List<Choice>()
+        scenario.Push(new Question("Choose what you want to do", new List<Choice>()
         {
-            new Choice ("Yes",Yes4),
-            new Choice("No",No4)
+            new Choice ("Yes, our city is open to anyone.",Yes4),
+            new Choice("No, we must think about the resources before taking any decisions.",No4)
         }));
         scenario.StartScenario();
     }
@@ -202,7 +202,7 @@ public class RoyalAdvisor: Character
 
         ResourcesManager.AddPopulation(-5);
         ResourcesManager.AddHappiness(10);
-        ResourcesManager.AddMoney(-50);
+        ResourcesManager.AddMoney(-60);
     }
 
     void No5()
