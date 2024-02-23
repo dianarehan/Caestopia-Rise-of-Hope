@@ -7,20 +7,20 @@ public class ResourcesManager : MonoBehaviour
 {
     private static int happiness;
     private static int money;
-    private static int loyality;
+    private static int population;
     private static UIDocument resourcesUI;
     private static VisualElement root;
     private static Label happinessLabel;
     private static Label moneyLabel;
-    private static Label loyalityLabel;
+    private static Label populationLabel;
 
     public static int Happiness {  get { return happiness; } }
     public static int Money { get { return money; } }
-    public static int Loyality { get { return loyality; } }
+    public static int Population { get { return population; } }
 
     public static void Initialize()
     {
-        happiness = 50; money = 200; loyality = 100;
+        happiness = 50; money = 200; population = 100;
         resourcesUI = GameObject.Find("Resources Manager").GetComponent<UIDocument>();
         SetVisualElement();
         UpdateVisualEmelent();
@@ -36,9 +36,9 @@ public class ResourcesManager : MonoBehaviour
         happiness += happinessToAdd;
         UpdateVisualEmelent();
     }
-    public static void AddLoyality(int loyalityToAdd)
+    public static void AddPopulation(int populationToAdd)
     {
-        loyality += loyalityToAdd;
+        population += populationToAdd;
         UpdateVisualEmelent();
     }
 
@@ -46,7 +46,7 @@ public class ResourcesManager : MonoBehaviour
     {
         happinessLabel.text = happiness.ToString();
         moneyLabel.text = money.ToString();
-        loyalityLabel.text = loyality.ToString();
+        populationLabel.text = population.ToString();
     }
 
     private static void SetVisualElement()
@@ -54,6 +54,6 @@ public class ResourcesManager : MonoBehaviour
         root = resourcesUI.rootVisualElement;
         happinessLabel = root.Q<Label>("Happiness");
         moneyLabel = root.Q<Label>("Money");
-        loyalityLabel = root.Q<Label>("Loyality");
+        populationLabel = root.Q<Label>("Loyality");
     }
 }

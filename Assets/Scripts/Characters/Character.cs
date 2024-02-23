@@ -26,7 +26,11 @@ public abstract class Character : MonoBehaviour
     }
     protected void Leave()
     {
-        characterMovement.Leave();
+        characterMovement?.Leave();
+    }
+    protected void KillCharacter()
+    {
+        characterMovement?.Kill();
     }
     protected void SetFirstScenario(Scenario scenario)
     {

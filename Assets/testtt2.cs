@@ -23,7 +23,7 @@ public class testtt2 : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
-            ResourcesManager.AddLoyality(30);
+            ResourcesManager.AddPopulation(30);
         }
     }
 }
