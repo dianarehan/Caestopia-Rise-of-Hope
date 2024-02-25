@@ -6,3 +6,4 @@ This game was made entirely by our team, including the music. We didn't use any 
 
 - The team was responsible for sound and concept design game development, art design, characters, and UI design.
 
+Check it out on itch.io https://dianarehan.itch.io/caestopia-rise-of-hope
